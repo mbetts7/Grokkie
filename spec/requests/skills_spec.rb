@@ -7,7 +7,6 @@ describe "Skills" do
 		@skill = @category.skills.create!(name: 'Javascript')
 		@roadmap = @skill.roadmaps.create!(title: 'test', description: 'just testing to test')
 		get category_skill_path(@category.id, @skill.id)
-
 	end
 	describe 'GET show page for a particular skill /categories/:category_id/skills/:id' do
 		it 'should be successful' do
@@ -27,6 +26,7 @@ describe "Skills" do
 	    	response.body.should include("0")
 	    end
 
+        it 'should show the first five resources of a roadmap'
 	    it 'should show the username owner of that roadmap' 
 	end
 end
