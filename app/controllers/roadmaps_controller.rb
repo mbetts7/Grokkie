@@ -9,6 +9,8 @@ class RoadmapsController < ApplicationController
   end
 
   def show
+    id = params[:id]
+    @roadmap = Roadmap.find(id)
   end
 
   def update

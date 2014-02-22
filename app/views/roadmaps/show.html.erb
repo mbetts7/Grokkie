@@ -1,2 +1,9 @@
-<h1>Roadmaps#show</h1>
-<p>Find me in app/views/roadmaps/show.html.erb</p>
+<div>
+<h1><%= @roadmap.title %></h1><br>
+<%= @roadmap.description %><br>
+<% @roadmap.resources.each do |resource| %>
+  <%= resource.name %> <br>
+  <%= resource.url %> <br>
+  <%= resource.description %>
+<% end %>
+</div>
