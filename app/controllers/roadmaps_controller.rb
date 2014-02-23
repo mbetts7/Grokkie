@@ -6,7 +6,6 @@ class RoadmapsController < ApplicationController
   end
 
   def create
-    binding.pry
     skill = params.permit[:skill_id]
     new_roadmap = skill.roadmaps.create(roadmap_params)
     redirect_to roadmap_path(new_roadmap)
