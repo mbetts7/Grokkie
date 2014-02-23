@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Grokkie::Application.config.secret_key_base = 'edce92ea9e8c4b938451359a4cbd7b2ca0223ed308ccb60586973e9a3bd5d51dbbb920905b5e9c859bbc54d73cb59bb83a805477afb8ded0d8e79066f90cd415'
+Grokkie::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
