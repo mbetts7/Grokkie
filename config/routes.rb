@@ -1,4 +1,5 @@
 Grokkie::Application.routes.draw do
+  get "samples/index"
   root to: "grokkies#index"
 
     resources :categories, only:[:show] do
