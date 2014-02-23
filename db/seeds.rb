@@ -5,6 +5,9 @@ category << Category.create!(name: 'Programming')
 skill = []
 
 skill << category[0].skills.create!(name: 'Javascript')
+skill << category[0].skills.create!(name: 'Ruby')
+skill << category[0].skills.create!(name: 'Rails')
+skill << category[0].skills.create!(name: 'Python')
 
 roadmap = []
 
