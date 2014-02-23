@@ -1,0 +1,10 @@
+<div>
+<h1><%= @roadmap.title %></h1><br>
+<%= @roadmap.description %><br>
+<% @roadmap.resources.each do |resource| %>
+  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %> <br>
+<% end %>
+</div>
+<%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
+<%= link_to "Edit", edit_roadmap_path(@roadmap) %><br>
+<%= link_to "Delete", roadmap_path(@roadmap), method: :delete %>

@@ -1,0 +1,10 @@
+<h1> Grokkie </h1>
+<h2> Categories </h2>
+<div>
+	<% @categories.each do |category| %>
+	  <%= category.name %> <br>
+	    <%category.skills.each do |skill| %>
+	      <%= link_to skill.name, category_skill_path(category, skill) %>
+	    <% end %>
+	<% end %>
+</div>
