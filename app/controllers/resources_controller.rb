@@ -10,14 +10,21 @@ class ResourcesController < ApplicationController
   end
 
   def edit
+    @roadmap = Roadmap.find(params[:roadmap_id])
+    @resource = @roadmap.resources.find(params[:id])
   end
 
   def update
+    roadmap = Roadmap.find(params[:roadmap_id])
+    resource = roadmap.resources.find(params[:id])
+    resource.update(resource_params)
+    redirect_to roadmap_resource_path(roadmap, resource)
+
   end
 
   def show
-    roadmap = Roadmap.find(params[:roadmap_id])
-    @resource = roadmap.resources.find(params[:id])
+    @roadmap = Roadmap.find(params[:roadmap_id])
+    @resource = @roadmap.resources.find(params[:id])
   end
 
   def destroy
