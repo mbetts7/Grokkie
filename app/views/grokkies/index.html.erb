@@ -1,8 +1,7 @@
-if not signed in <br>
-Sign in <br>
-else<br>
-Profile <br>
-Sign out (if signed in)<br>
+
+<%= link_to "Sign up", new_user_registration_path %> <br>
+<%= link_to "Sign in", new_user_session_path %><br>
+<%= link_to "Sign in with Linkedin", user_omniauth_authorize_path(:linkedin) %> 
 
 <h1> Grokkie </h1><br>
 About us should go here...<br>
