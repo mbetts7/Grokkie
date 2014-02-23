@@ -1,2 +1,7 @@
-<h1>Roadmaps#new</h1>
-<p>Find me in app/views/roadmaps/new.html.erb</p>
+<%= form_for @roadmap do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, placeholder: "Title" %><br>
+  <%= f.label :description %>
+  <%= f.text_area :description, placeholder: "Description" %><br>
+  <%= f.submit %>
+ <% end %>

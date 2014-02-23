@@ -4,6 +4,9 @@
 <% @roadmap.resources.each do |resource| %>
   <%= resource.name %> <br>
   <%= resource.url %> <br>
-  <%= resource.description %>
+  <%= resource.description %><br>
 <% end %>
 </div>
+
+<%= link_to "Edit", edit_roadmap_path(@roadmap) %>
+<%= link_to "Delete", roadmap_path(@roadmap), method: :delete %>
