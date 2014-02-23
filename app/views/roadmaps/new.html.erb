@@ -1,17 +1,8 @@
-<%= form_for @roadmap do |f| %>
+<h1> Create your Roadmap! </h1>
 
-  Select a Category<br>
-
-<%= collection_select(:post, :category_id, @categories, :id, :name, prompt: true) %><br>
-
-  Select Skill<br>
-<%= collection_select(:post, :skill_id, @skills, :id, :name, prompt: true) %><br>
-
-<%= select "skill", "id", @skills.map{|s| [s.name, s.id]}, {}, data: { behavior: 'skill_dropdown' } %>
-
-	  <%= f.label :title %>
-	  <%= f.text_field :title, placeholder: "Title" %><br>
-	  <%= f.label :description %>
-	  <%= f.text_area :description, placeholder: "Description" %><br>
-	  <%= f.submit %>
+<%= simple_form_for (@roadmap) do |f| %>
+      <%= f.association :skill %>
+	  <%= f.input :title, as: :string %><br>
+	  <%= f.input :description, as: :text %><br>
+	  <%= f.button :submit %>
  <% end %>
