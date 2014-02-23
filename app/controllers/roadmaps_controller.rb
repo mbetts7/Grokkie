@@ -1,15 +1,15 @@
 class RoadmapsController < ApplicationController
   def new
     @roadmap = Roadmap.new()
-    @categories = Category.all
-    @skills = Skill.all
   end
 
   def create
-    binding.pry
-    skill = params.permit[:skill_id]
-    new_roadmap = skill.roadmaps.create(roadmap_params)
-    redirect_to roadmap_path(new_roadmap)
+    new_roadmap = Roadmap.new(roadmap_params)
+    if new_roadmap.save
+       redirect_to roadmap_path(new_roadmap)
+    else
+      render :new
+    end
   end
 
   def edit
@@ -38,6 +38,6 @@ class RoadmapsController < ApplicationController
   private 
 
   def roadmap_params
-    params.require(:roadmap).permit(:title, :description)
+    params.require(:roadmap).permit(:title, :description, :skill_id)
   end
 end

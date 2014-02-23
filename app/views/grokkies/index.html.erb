@@ -2,9 +2,9 @@
 <h2> Categories </h2>
 <div>
 	<% @categories.each do |category| %>
-	  <%= category.name %> <br>
+	  <strong><%= category.name %></strong> <br>
 	    <%category.skills.each do |skill| %>
-	      <%= link_to skill.name, category_skill_path(category, skill) %>
+	      <%= link_to skill.name, category_skill_path(category, skill) %><br>
 	    <% end %>
 	<% end %>
 </div>

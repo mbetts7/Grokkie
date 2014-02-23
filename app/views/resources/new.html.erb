@@ -1,2 +1,6 @@
-<h1>Resources#new</h1>
-<p>Find me in app/views/resources/new.html.erb</p>
+<%= simple_form_for @resource, method: :post, url: roadmap_resources_path do |f| %>
+	  <%= f.input :name, as: :string %><br>
+	  <%= f.input :url, as: :string %><br>
+	  <%= f.input :description, as: :text %><br>
+	  <%= f.button :submit %>
+<% end %>
