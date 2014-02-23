@@ -1,5 +1,5 @@
 <h1> <%= @skill.name %> </h1>
-
+<%= link_to "Create Roadmap", new_roadmap_path %><br>
 <% @skill.roadmaps.each do |roadmap| %>
 	<%= link_to roadmap.title, roadmap_path(roadmap.id) %><br>
 	<%= roadmap.description %> <br>

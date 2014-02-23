@@ -1,2 +1,6 @@
-<h1>Resources#edit</h1>
-<p>Find me in app/views/resources/edit.html.erb</p>
+<%= simple_form_for [@roadmap, @resource] do |f| %>
+	  <%= f.input :name, as: :string %><br>
+	  <%= f.input :url, as: :string %><br>
+	  <%= f.input :description, as: :text %><br>
+	  <%= f.button :submit %>
+<% end %>

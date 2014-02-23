@@ -1,3 +1,12 @@
+Sign out <br>
+Categories (for straightforwarding search should also branch out skills)<br>
+Search bar (M)<br>
+<br>
+
 <%= @resource.name %><br>
 <%= @resource.url %><br>
-<%= @resource.description %>
+<%= @resource.description %><br>
+<%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %>
+   <%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>
+
+<%= link_to "Return to Roadmap", roadmap_path(@roadmap) %><br>
