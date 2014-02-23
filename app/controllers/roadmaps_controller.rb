@@ -1,8 +1,6 @@
 class RoadmapsController < ApplicationController
   def new
     @roadmap = Roadmap.new()
-    @categories = Category.all
-    @skills = Skill.all
   end
 
   def create
