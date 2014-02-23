@@ -10,14 +10,21 @@ resources = []
 # users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
 # users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
 
+users << User.create(email: 'mbetts7@gmail.com', password: 'password', password_confirmation: 'password')
+users << User.create(email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password')
+users << User.create(email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password')
+users << User.create(email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
+users << User.create(email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
+
+
 # Programming/Javascript/Java-Java-Time/Resources
 category << Category.create!(name: 'Programming')
   skill << category[0].skills.create!(name: 'Javascript')
     # roadmaps for Javascript
-    roadmap << skill[0].roadmaps.create!(title: "Java Java Time!", 
+    roadmap << skill[0].roadmaps.create!(title: "FIRST ROADMAP: The Real Deal Javascript Roadmap", 
       description: "Learning javascript is tough and it's especially difficult to get started")
         resources << roadmap[0].resources.create!(
-          name: "jQuery codecademy", 
+          name: "FIRST RESOURCE: jQuery codecademy", 
           description: "Learn jQuery first, then learn javascript.  Much easier to start there.  Do all of codeacademy, it's great", 
           url: "http://www.codecademy.com/tracks/jquery")
         resources << roadmap[0].resources.create!(
@@ -61,10 +68,10 @@ category << Category.create!(name: 'Programming')
       title: "Journey to JS", 
       description: "This is how I learned JS really fast")
     roadmap << skill[0].roadmaps.create!(
-      title: "[roadmap title]", 
+      title: "Exploring javascript", 
       description: "[description of roadmap]")
     roadmap << skill[0].roadmaps.create!(
-      title: "[roadmap title]", 
+      title: "The easy way to learn JS", 
       description: "[description of roadmap]")
     roadmap << skill[0].roadmaps.create!(
       title: "[roadmap title]", 

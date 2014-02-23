@@ -5,6 +5,7 @@ gem 'rails', '4.0.2'
 
 gem 'pg'
 gem 'simple_form'
+gem 'devise'
 
 # Use sqlite3 as the database for Active Record
 
