@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20140224225342) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "image_url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "comments", force: true do |t|
@@ -43,6 +47,10 @@ ActiveRecord::Schema.define(version: 20140224225342) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "image_url"
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
   end
 
   add_index "resources", ["roadmap_id"], name: "index_resources_on_roadmap_id", using: :btree
@@ -50,11 +58,15 @@ ActiveRecord::Schema.define(version: 20140224225342) do
   create_table "roadmaps", force: true do |t|
     t.text     "title"
     t.string   "description"
-    t.integer  "vote",        default: 0
+    t.integer  "vote",               default: 0
     t.integer  "skill_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "image_url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "roadmaps", ["skill_id"], name: "index_roadmaps_on_skill_id", using: :btree
