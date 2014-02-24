@@ -6,6 +6,7 @@
 #  name       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  image_url  :text
 #
 
 class Category < ActiveRecord::Base
