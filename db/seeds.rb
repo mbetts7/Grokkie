@@ -10,11 +10,11 @@ resources = []
 # users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
 # users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
 
-users << User.create(email: 'mbetts7@gmail.com', password: 'password', password_confirmation: 'password')
-users << User.create(email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password')
-users << User.create(email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
+# users << User.create!(email: 'mbetts7@gmail.com', password: 'password', password_confirmation: 'password')
+# users << User.create!(email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password')
+# users << User.create!(email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password')
+# users << User.create!(email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
+# users << User.create!(email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
 
 
 # Programming/Javascript/Java-Java-Time/Resources

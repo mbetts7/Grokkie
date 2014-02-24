@@ -1,6 +1,7 @@
 <%= link_to "Home", root_path %>
 <div>
 <h1><%= @roadmap.title %></h1><br>
+<%= image_tag @roadmap.image(:medium) %><br>
 <%= @roadmap.description %><br>
 <% @roadmap.resources.each do |resource| %>
   <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %> <br>

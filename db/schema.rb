@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224000942) do
+ActiveRecord::Schema.define(version: 20140224192847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,11 +50,15 @@ ActiveRecord::Schema.define(version: 20140224000942) do
   create_table "roadmaps", force: true do |t|
     t.text     "title"
     t.string   "description"
-    t.integer  "vote",        default: 0
+    t.integer  "vote",               default: 0
     t.integer  "skill_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "image_url"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "roadmaps", ["skill_id"], name: "index_roadmaps_on_skill_id", using: :btree

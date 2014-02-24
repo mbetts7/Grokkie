@@ -3,6 +3,8 @@
       <%= f.association :skill %>
 	  <%= f.input :title, as: :string %><br>
 	  <%= f.input :description, as: :text %><br>
+    <%= f.label :image %>
+    <%= f.file_field :image %><br>
 	  <%= f.button :submit %>
  <% end %>
 
