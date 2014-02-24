@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 	def edit
 		id = params[:id]
 		@profile = User.find(id)
+		@learning_style = ["Visual", "Auditory", "Kinesthetics"]
 	end
 
 	def update
@@ -18,6 +19,6 @@ class UsersController < ApplicationController
 
 	private
 	def profile_params
-		params.require(:user).permit(:twitter_name, :github_name, :bio, :username)
+		params.require(:user).permit(:twitter_name, :github_name, :bio, :username, :learning_style)
 	end
 end
