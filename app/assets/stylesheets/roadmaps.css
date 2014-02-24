@@ -1,0 +1,20 @@
+/* CREATE A NEW ROADMAP */
+
+.new_roadmap_wrapper {
+  text-align: center;
+}
+
+form {
+    font-size: 0;
+}
+
+form input {
+    font-size: 12px;
+}
+
+@media (min-width: 540px) and (max-width: 1024px) {
+  .new_roadmap_form {
+    
+  }
+}
+

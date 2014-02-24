@@ -1,9 +1,24 @@
-<%= link_to "Home", root_path %>
-<h1> Create your Roadmap! </h1>
+<div class="new_roadmap_wrapper">
+  <div class="row">
+    <div class="small-10 medium-4 large-4 columns">
+    <%= link_to "Home", root_path %>
+    </div>
+  </div>
 
-<%= simple_form_for (@roadmap) do |f| %>
-      <%= f.association :skill %>
-	  <%= f.input :title, as: :string %><br>
-	  <%= f.input :description, as: :text %><br>
-	  <%= f.button :submit %>
- <% end %>
+  <div>
+    <div class="small-10 small-centered medium-8 medium-centered large-8 large-centered columns">
+      <h5>Create a new roadmap</h5>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-10 medium-8 medium-centered large-8 large-centered columns">
+      <%= simple_form_for (@roadmap), :html=> { class: 'new_roadmap_form' } do |f| %>
+          <%= f.association :skill %>
+      	  <%= f.input :title, as: :string, :placeholder=> "Name your Roadmap" %>
+      	  <%= f.input :description, as: :text, :placeholder=> "Description"  %>
+      	  <%= f.button :submit %>
+       <% end %>
+     </div>
+  </div>
+</div>
