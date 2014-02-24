@@ -1,7 +1,9 @@
-<%= @profile.username %><br>
-<%= @profile.twitter_name %><br>
-<%= @profile.github_name %><br>
-<%= @profile.bio %><br>
+Username: <%= @profile.username %><br>
+Twitter: <%= @profile.twitter_name %><br>
+Github: <%= @profile.github_name %><br>
+Bio: <%= @profile.bio %><br>
 
+<% if current_user == @profile %>
 <%= link_to "Edit Profile", edit_user_path(@profile) %><br>
 <%= link_to "Account Settings", edit_user_registration_path %><br>
+<% end %>
