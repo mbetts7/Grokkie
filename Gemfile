@@ -56,3 +56,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'hashie'
+
+gem "paperclip", "~> 4.1"
+gem "aws-sdk", "~> 1.34.1"
