@@ -1,0 +1,8 @@
+<%= simple_form_for @profile do |f| %>
+	  <%= f.input :username, as: :string %><br>
+	  <%= f.input :twitter_name, as: :string %><br>
+	  <%= f.input :github_name, as: :string %><br>
+	  <%= f.input :learning_style, collection: @learning_style %><br>
+	  <%= f.input :bio, as: :text %><br>
+	  <%= f.button :submit %>
+ <% end %>
