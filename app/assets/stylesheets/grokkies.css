@@ -1,0 +1,66 @@
+/* All Pages common layout */
+body {
+  /*text-align: center; */
+  background-color: #dfe5ea;
+}
+
+/* INDEX PAGE */
+
+#header_wrapper {
+  background-color: #444;
+
+}
+
+#logo {
+  text-align: center;
+}
+
+#navbar_actions {
+  text-align: center;
+
+}
+
+#navbar_actions ul {
+  list-style-type: none;
+  margin-top:10px;
+}
+
+#navbar_actions li {
+  display: inline-block;
+  margin: 10px;
+}
+
+#about_us_wrapper {
+  height: 380px;
+  background-color: #444;  
+}
+
+#tagline {
+  margin:45px 0;
+}
+
+.about_us_column {
+  height: 160px;
+}
+
+#category_circles {
+  display: inline-block;
+  width:100px;
+  height:100px;
+  border: 1px solid black;
+  border-radius:100px; 
+  -webkit-border-radius:100px;
+  -moz-border-radius:100px;
+
+}
+
+
+
+@media (max-width: 540px) {
+  #navbar_actions li {
+    margin: 1px;
+  }
+}
+
+
+
