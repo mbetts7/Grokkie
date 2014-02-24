@@ -5,9 +5,13 @@
     </div>
     <div class="medium-6 large-4 columns" id="navbar_actions">
       <ul>
+        <% if user_signed_in? %>
         <li>My Profile</li>
-        <li>Sign Up</li>
-        <li>Sign In</li>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+          <% else %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path%></li>
+        <% end %>
       </ul>
     </div>
 
