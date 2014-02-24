@@ -14,7 +14,7 @@
 
   </div>
   <div class="row">  
-    <div class="large-12 columns" id="tagline"><h5>This is our tagline</h5></div>
+    <div class="medium-4 large-12 columns" id="tagline"><h5>This is our tagline</h5></div>
   </div>  
   <div class="row" id="about_us_wrapper">   
     <div class="medium-4 large-4 columns about_us_column">Column 1</div>
@@ -23,7 +23,7 @@
   </div>
   <div class="row">
     <div class="medium-5 large-4 columns">Find out more about our team</div>
-    <div class="medium-4 large-2 columns"><a class="small button">Create a Roadmap</a></div>
+    <div class="medium-4 large-2 columns"><a href="">Create a Roadmap</a></div>
   </div>    
 </div>
 
@@ -33,38 +33,138 @@
 </div>
 
 <div class="row">
-  <div class="hide-for-small medium-3 large-3 columns">
-    <h5> Roadmap your way to success:</h5>
+  <div class="hide-for-small medium-4 large-4 columns">
+    <p> Roadmap your way to success:</p>
   </div>
 
-  <div class="small-12 medium-8 large-9 columns">
-    <ul id="featured_categories">
-  	<% @categories.each do |category| %>
-  	  <div id="category_circles">
-        <li><%= category.name %></li>
-      </div> 
+<!-- Need to fix this dropdown bar for each category and sub-skill -->
+  <div class="small-12 medium-8 large-8 columns" id="featured_categories">
+    	<% @categories.each do |category| %>
+          <a href="#" data-dropdown="drop"><li><%= category.name %></li></a>
+    
+      <ul id="drop" class="f-dropdown" data-dropdown-content> 
           <%category.skills.each do |skill| %>
-  	      <%=link_to skill.name, category_skill_path(category, skill)%>
+  	      <li><%=link_to skill.name, category_skill_path(category, skill)%></li>
   	    <% end %>
+      </ul>
   	<% end %>
-    </ul>
   </div>
 </div>
 
 
 <div class="row">
-  <div class="small-6 medium-6 large-6 columns">
-    Featured Roadmaps:
+  <div class="small-8 medium-6 large-6 columns">
+    <h4>Featured Roadmaps:</h4>
   </div>
 </div>
 
 <div class="row">
-  <div class="small-10 medium-6 large-4 columns featured_roadmaps">Featured Roadmap 1</div>
-  <div class="small-10 medium-6 large-4 columns featured_roadmaps">Featured Roadmap 2</div>
-  <div class="small-10 medium-6 large-4 columns featured_roadmaps">Featured Roadmap 3</div>
-  <div class="small-10 medium-6 large-4 columns featured_roadmaps">Featured Roadmap 4</div>
-  <div class="small-10 medium-6 large-4 columns featured_roadmaps">Featured Roadmap 5</div>
-  <div class="small-10 medium-6 large-4 columns featured_roadmaps">Featured Roadmap 6</div>
+  <table class="featured_roadmaps">
+    <tr>
+      <td class="small-10 medium-5 large-3 columns">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <a href=""><p>Username<p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>votes<p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <a href=""><img src="">This is a potenial image for the roadmap</a> 
+        </div>
+      </td>
+
+      <td class="small-10 medium-5 large-3 columns">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <a href=""><p>Username<p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>votes<p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <a href=""><img src="">This is a potenial image for the roadmap</a> 
+        </div>
+      </td>
+
+      <td class="small-10 medium-5 large-3 columns">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <a href=""><p>Username<p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>votes<p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <a href=""><img src="">This is a potenial image for the roadmap</a> 
+        </div>
+      </td>
+
+      <td class="small-10 medium-5 large-3 columns">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <a href=""><p>Username<p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>votes<p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <a href=""><img src="">This is a potenial image for the roadmap</a> 
+        </div>
+      </td>
+
+      <td class="small-10 medium-5 large-3 columns">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <a href=""><p>Username<p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>votes<p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <a href=""><img src="">This is a potenial image for the roadmap</a> 
+        </div>
+      </td>
+
+      <td class="small-10 medium-5 large-3 columns">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <a href=""><p>Username<p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>votes<p>
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <a href=""><img src="">This is a potenial image for the roadmap</a> 
+        </div>
+      </td>
+
+    </tr>
+  </table>
 </div>
 
 

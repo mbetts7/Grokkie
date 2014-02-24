@@ -30,6 +30,8 @@ body {
   margin: 0 15px;
 }
 
+/* About us bar on tablet and web */
+
 #tagline {
   margin-bottom:40px;
 }
@@ -44,44 +46,85 @@ body {
   border: 1px solid black;
 }
 
+/* Search Bar */
+
 .search_wrapper {
   height: 60px;
   background: #b1c0cf;
+  margin-bottom: 20px;
 }
+
+/* Featured Categories */
 
 #featured_categories {
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
 #featured_categories li {
-
-}
-
-#category_circles {
   display: inline-block;
-  margin:0 -50px;
-  width:100px;
-  height:100px;
-  border: 1px solid black;
-  border-radius:100px; 
-  -webkit-border-radius:100px;
-  -moz-border-radius:100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
+
+
+/* Featured Roadmaps*/
 
 .featured_roadmaps {
-  height:400px;
-  border: 1px solid black;
-  text-align: center;
+  background-color: inherit;
+  border: none;
 }
 
+.featured_roadmaps td {
+  height:300px;
+  border: 1px solid black;
+  text-align: center;
+  margin: 20px 40px;
+  background-color: #fff;
+}
 
+.featured_roadmaps td:last-child {
+  margin-right:46px;
+}
 
+#featured_roadmap_title {
+  height:30%;  
+}
+
+#featured_roadmap_images {
+  margin-top: 5%;
+  height: 40%;
+  border: 1px solid black;
+
+}
+
+/* MEDIA QUERIES FOR INDEX PAGE */
+
+@media (min-width: 540px) and (max-width: 1024px) {
+
+  .featured_roadmaps td:last-child {
+    /*margin-right: 158px;*/
+  }
+}
 
 @media (max-width: 540px) {
   #navbar_actions li {
     margin: 1px;
   }
+
+  #featured_categories {
+    text-align: center;
+  } 
+
+  #featured_categories li {
+    margin: 0 5px;
+  }  
+
+  .featured_roadmaps td:last-child {
+    margin-right: 23px;
+  }
 }
+
 
 
 
