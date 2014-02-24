@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222205434) do
+ActiveRecord::Schema.define(version: 20140224000942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140222205434) do
     t.text     "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "image_url"
   end
 
   create_table "comments", force: true do |t|
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20140222205434) do
     t.integer  "roadmap_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "image_url"
   end
 
   add_index "resources", ["roadmap_id"], name: "index_resources_on_roadmap_id", using: :btree
@@ -52,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140222205434) do
     t.integer  "skill_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "image_url"
   end
 
   add_index "roadmaps", ["skill_id"], name: "index_roadmaps_on_skill_id", using: :btree
@@ -61,8 +64,30 @@ ActiveRecord::Schema.define(version: 20140222205434) do
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "image_url"
   end
 
   add_index "skills", ["category_id"], name: "index_skills_on_category_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "username"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
