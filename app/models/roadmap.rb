@@ -9,6 +9,7 @@
 #  skill_id    :integer
 #  created_at  :datetime
 #  updated_at  :datetime
+#  image_url   :text
 #
 
 class Roadmap < ActiveRecord::Base
