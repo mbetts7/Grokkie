@@ -2,15 +2,11 @@
 #
 # Table name: categories
 #
-#  id                 :integer          not null, primary key
-#  name               :text
-#  created_at         :datetime
-#  updated_at         :datetime
-#  image_url          :text
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
-#  image_file_size    :integer
-#  image_updated_at   :datetime
+#  id         :integer          not null, primary key
+#  name       :text
+#  created_at :datetime
+#  updated_at :datetime
+#  image_url  :text
 #
 
 class Category < ActiveRecord::Base
