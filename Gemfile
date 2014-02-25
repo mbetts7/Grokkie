@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'rails_12factor', :group => :production
+
+gem 'acts_as_votable', '~> 0.8.0'
+
 gem 'pg'
 gem 'simple_form'
 gem 'devise'
@@ -27,6 +31,7 @@ gem 'jquery-rails'
 
 gem 'foundation-rails'
 
+gem 'font-awesome-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -54,8 +59,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'hashie'
 
 gem "paperclip", "~> 4.1"
 gem "aws-sdk", "~> 1.34.1"

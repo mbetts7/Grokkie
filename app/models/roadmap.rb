@@ -20,6 +20,7 @@ class Roadmap < ActiveRecord::Base
   belongs_to :skill
   belongs_to :user
   has_many :resources
+  acts_as_votable
 
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/background1.jpeg"
   # validates_attachment :image,

@@ -1,8 +1,5 @@
 /* All Pages common layout */
-body {
-  /*text-align: center; */
-  background-color: #dfe5ea;
-}
+
 
 /* INDEX PAGE */
 
@@ -37,13 +34,27 @@ body {
 }
 
 #about_us_wrapper {
-  margin-bottom: 20px;  
+  margin-bottom: 20px; 
+  color: #fff;
 }
 
 .about_us_column {
   height: 160px;
+  width: 300px;
   text-align: center;
-  border: 1px solid black;
+  border-radius: 1px; 
+  margin: 0 16px;
+  background-color: #0c84cc; 
+}
+
+.about_us_column .fa {
+  padding-top: 10px;
+}
+
+.about_us_column p {
+  font-size: 16px;
+  line-height: 20px;
+  padding-top: 10px;
 }
 
 /* Search Bar */

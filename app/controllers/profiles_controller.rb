@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class ProfilesController < ApplicationController
 	def show
 		id = params[:id]
 		@profile = User.find(id)
@@ -14,11 +14,11 @@ class UsersController < ApplicationController
 		id = params[:id]
 		profile = User.find(id)
 		profile.update(profile_params)
-		redirect_to user_path(profile)
+		redirect_to profile_path(profile)
 	end
 
 	private
 	def profile_params
-		params.require(:user).permit(:twitter_name, :github_name, :bio, :username, :learning_style)
+		params.require(:profile).permit(:twitter_name, :github_name, :bio, :username, :learning_style)
 	end
 end
