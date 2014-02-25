@@ -11,4 +11,5 @@
 
 class Category < ActiveRecord::Base
 	has_many :skills, dependent: :destroy
+  has_many :roadmaps, :through => :skills
 end
