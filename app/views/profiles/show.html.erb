@@ -1,28 +1,33 @@
-<div id="profile_show_container">
-  <div class="row">
-    <div class="small-12 medium-5 large-5 columns" id="user_profile_left_column">
+<div class="profile_page_container">
+  <div id="profile_form">
+    <div class="row">
+      <div class="small-12 medium-5 large-5 columns" id="user_profile_left_column">
+        <h5>PROFILE</h5>
         <% photo = @profile.image %>
-        <div class="small-6 medium-6 large-6 columns">Image:<image src=<%= "#{@profile.image}" %> /></div>
-        <div class="small-6 medium-6 large-6 columns">Username: <%= @profile.username %></div>
-        <div class="small-6 medium-6 large-6 columns">Twitter: <%= @profile.twitter_name %></div>
-        <div class="small-6 medium-6 large-6 columns">Github: <%= @profile.github_name %></div>
-    </div> 
-    <div class="small-12 medium-6 large-6 columns" id="user_profile_right_column"> 
-        <div>Learning Style: <%= @profile.learning_style %></div>
+        <div class="small-6 medium-6 large-6 columns" id="profile_img">Image:<image src= <%= "#{@profile.image}" %> /></div>
+        <ul class="small-6 medium-6 large-4 columns">
+          <li><i class="fa fa-user"></i><%= @profile.username %></li>
+          <li><i class="fa fa-twitter"></i><span><%= @profile.twitter_name %></li>
+          <li><i class="fa fa-github"></i><%= @profile.github_name %></li>
+        </ul>
+        <div class="small-12 medium-12 large-12 columns">
+          <% if current_user == @profile %>
+          <%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %><br>
+          <%= link_to edit_user_registration_path do %><i class="fa fa-lock">Account Settings</i><% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="small-12 medium-5 large-6 columns end" id="user_profile_right_column">
+      <h5>BIO</h5> 
+        <div>Learning Style: <%= @profile.learning_style %></div><br/>
         <div>Bio: <%= @profile.bio %></div>
+      </div>
+    </div>
+
+    <div class="row"> 
+      <div class="small-12 medium-11 large-12 columns" id="user_profile_body">
+        <h5>USER ROADMAPS</h5> 
+      </div>
     </div>
   </div>
-
-  <div class="row"> 
-    <div class="small-12 medium-12 large-12 columns" id="user_profile_body">
-      users roadmaps
-    </div>
-  </div>
-
-  <div>
-    <% if current_user == @profile %>
-    <%= link_to "Edit Profile", edit_profile_path(@profile) %><br>
-    <%= link_to "Account Settings", edit_user_registration_path %><br>
-    <% end %>
-</div>
 </div>

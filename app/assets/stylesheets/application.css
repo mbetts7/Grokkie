@@ -19,11 +19,11 @@
 /******************/
  /* APLICATION STYLE */
 /****************/
-
+/*
 * {
   border: 1px solid black;
 }
-
+*/
 body {
   color: #435160;
   font-family: 'Open Sans', sans-serif;
@@ -89,19 +89,78 @@ body {
 
 /* USER PROFILE SHOW PAGE */
 
-#profile_show_container {
-  margin-top: 10%;
+.profile_page_container {
+  background-color: #ecf0f1;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: inherit; 
 }
 
+#profile_form {
+  margin-top: 7%;
+  margin-left: 6%;
+}
+
+#profile_form ul {
+  list-style-type: none;
+}
+
+#profile_form ul li {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+
 #user_profile_left_column {
-  margin: 10px;
+  height:200px;
+  margin-right: 2px;
   padding: 10px;
+  background-color: #fff;
+
+}
+#user_profile_left_column h5 {
+  padding: 15px 0;
+  margin-top: -10px;
+  width: 100%;
+  background-color: #34495e;
+  border: 1px solid black;
+  text-align: center;
+  color: #fff;
+}
+
+#user_profile_left_column #profile_img {
+  height: 80px;
+  width: 110px;
+  border: 1px solid black;
+}
+
+#user_profile_left_column i {
+  padding:0 10px;
 }
 
 #user_profile_right_column {
-  margin:10px;
+  height:200px;
+  margin-left: 80px;
   padding: 10px;
-  
+  background-color: white;
+}
+
+#user_profile_right_column h5{
+  padding: 15px 0;
+  margin-top: -10px;
+  width: 100%;
+  background-color: #34495e;
+  border: 1px solid black;
+  text-align: center;
+  color:#fff;
+}
+
+#user_profile_body {
+  margin-top:20px;
+  height: 300px;
+  background-color: #fff;
 }
 
 /* MEDIA QUERIES */
