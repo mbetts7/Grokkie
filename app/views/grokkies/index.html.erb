@@ -6,8 +6,8 @@
     <div class="medium-6 large-4 columns" id="navbar_actions">
       <ul>
         <% if user_signed_in? %>
-        <li><%= link_to "My Profile", user_path(current_user) %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <li><%= link_to "My Profile", profile_path(current_user) %></li>
+        <li><%= button_to "Sign Out", destroy_user_session_path, :method => :delete %>
           <% else %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <li><%= link_to "Sign In", new_user_session_path%></li>
