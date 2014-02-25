@@ -30,6 +30,10 @@ class ResourcesController < ApplicationController
   end
 
   def destroy
+    roadmap = Roadmap.find(params[:roadmap_id])
+    roadmap.resources.find(params[:id]).destroy
+    redirect_to roadmap_path(roadmap)
+
   end
 
   private

@@ -8,6 +8,6 @@
 <%= link_to "Delete Roadmap", roadmap_path(@roadmap), method: :delete %><br>
 <br>
 <% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %> <%= resource.position_id %><br>
+  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %><br>
 <% end %>
 </div>
