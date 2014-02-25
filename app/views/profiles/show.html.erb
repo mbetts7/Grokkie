@@ -12,7 +12,7 @@
         </ul>
         <div class="small-12 medium-12 large-12 columns">
           <% if current_user == @profile %>
-          <%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %><br>
+          <%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %>
           <%= link_to edit_user_registration_path do %><i class="fa fa-lock">Account Settings</i><% end %>
           <% end %>
         </div>
