@@ -17,8 +17,9 @@
 #
 
 class Roadmap < ActiveRecord::Base
-  belongs_to :skill
   belongs_to :user
+  belongs_to :skill
+  belongs_to :category
   has_many :resources
   acts_as_votable
 
@@ -27,7 +28,7 @@ class Roadmap < ActiveRecord::Base
       square: '200x200#',
       medium: '300x300>', 
       },   
-    default_url: 'assets/images/background1.jpeg'
+    default_url: '/login_background.jpg'
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 

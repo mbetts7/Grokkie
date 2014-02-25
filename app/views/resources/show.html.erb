@@ -11,6 +11,6 @@ Search bar (M)<br>
 <%= image_tag @resource.attachment(:square) %><br>
 <!-- paperclip -->
 <%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %>
-   <%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>
+<%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>
 
 <%= link_to "Return to Roadmap", roadmap_path(@roadmap) %><br>
