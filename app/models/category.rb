@@ -10,5 +10,6 @@
 #
 
 class Category < ActiveRecord::Base
+	has_many :roadmaps, dependent: :destroy
 	has_many :skills, dependent: :destroy
 end
