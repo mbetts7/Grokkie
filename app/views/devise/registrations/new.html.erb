@@ -1,22 +1,32 @@
-
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :username, :required => true, :autofocus => true %>
-
-    <% if f.object.password_required? %>
-	    <%= f.input :password, :required => true %>
-	    <%= f.input :password_confirmation, :required => true %>
-    <% end %>
+<div class="login_wrapper">
+  <div class="row">
+    <div class="small-9 small-centered medium-5 medium-centered large-4 large-centered columns login_form">
+      <div class="row">
+        <div class="small-10 medium-10 large-10 columns">
+        <h3>Create an account</h3>
+        </div>
+        <i class="fa fa-home fa-lg"></i>
+        <i class="fa fa-cog fa-lg"></i>
+      </div>
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+          <%= f.input :email, :required => true, :autofocus => true, :placeholder => "email"%>
+          <%= f.input :username, :required => true, :autofocus => true, :placeholder => "username" %>
+          <% if f.object.password_required? %>
+          <%= f.input :password, :required => true, :placeholder => "password" %>
+          <%= f.input :password_confirmation, :required => true, :placeholder => "password confirmation" %>
+          <% end %>
+          <div class="row">
+            <div class="small-2 medium-2 large-2 columns">
+            <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+            </div>
+            <div class="small-8 medium-8 large-8 columns" id="submit_button">
+              <i class="fa fa-power-off fa-lg"></i><%= f.button :submit, "Sign up" %>
+            </div>  
+          </div>
+      <% end %>
+      <%= render "devise/shared/links" %>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
