@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140225191140) do
+
+ActiveRecord::Schema.define(version: 20140225200143) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +66,7 @@ ActiveRecord::Schema.define(version: 20140225191140) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+    t.integer  "category_id"
   end
 
   add_index "roadmaps", ["skill_id"], name: "index_roadmaps_on_skill_id", using: :btree

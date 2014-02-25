@@ -11,3 +11,9 @@ Bio: <%= @profile.bio %><br>
 <%= link_to "Edit Profile", edit_profile_path(@profile) %><br>
 <%= link_to "Account Settings", edit_user_registration_path %><br>
 <% end %>
+
+<%= link_to "Create Roadmap", new_roadmap_path %><br>
+<br>
+<% @profile.roadmaps.each do |roadmap| %>
+	<%= link_to roadmap.title, roadmap_path(roadmap) %><br>
+<% end %>

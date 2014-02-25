@@ -226,72 +226,10 @@ category << Category.create!(name: 'Cooking')
       user_id: 1)
   # skill << category[2].skills.create!(name: 'Stir Fry')
   # skill << category[2].skills.create!(name: 'Salad Making')
+  skill << category[1].skills.create!(name: 'Body-Building')
+# category << Category.create!(name: 'Cooking')
+#   skill << category[2].skills.create!(name: 'Water Boiling')
+#   skill << category[2].skills.create!(name: 'Deep Fry')
+#   skill << category[2].skills.create!(name: 'Stir Fry')
+#   skill << category[2].skills.create!(name: 'Salad Making')
 
-category << Category.create!(name: 'Languages')
-
-  skill << category[3].skills.create!(name: 'English')
-    roadmap << skill[9].roadmaps.create!(
-      title: "Me talk pretty", 
-      description: "This is how I learned to speak English",
-      user_id: 2)
-    roadmap << skill[9].roadmaps.create!(
-      title: "I do grammar good", 
-      description: "[description of roadmap]",
-      user_id: 3)
-    roadmap << skill[9].roadmaps.create!(
-      title: "The King's Speech", 
-      description: "[description of roadmap]",
-      user_id: 4)
-  # skill << category[3].skills.create!(name: 'Spanish')
-  # skill << category[3].skills.create!(name: 'French')
-  # skill << category[3].skills.create!(name: 'German')
-
-category << Category.create!(name: 'Sciences')
-
-  skill << category[4].skills.create!(name: 'Chemistry')
-     roadmap << skill[10].roadmaps.create!(
-      title: "Molecules and whatnot", 
-      description: "This is how I learned to speak English",
-      user_id: 5)
-    roadmap << skill[10].roadmaps.create!(
-      title: "Bonds", 
-      description: "[description of roadmap]",
-      user_id: 1)
-    roadmap << skill[10].roadmaps.create!(
-      title: "Organic Chemistry", 
-      description: "Hell on earth but it works",
-      user_id: 2)
-  # skill << category[4].skills.create!(name: 'Biology')
-
-category << Category.create!(name: 'Math')
-
-   skill << category[5].skills.create!(name: 'Algebra')
-     roadmap << skill[11].roadmaps.create!(
-        title: "Learn algebra", 
-        description: "This is how I learned algebra",
-        user_id: 3)
-     roadmap << skill[11].roadmaps.create!(
-        title: "x is equal to y", 
-        description: "[description of roadmap]",
-        user_id: 4)
-     roadmap << skill[11].roadmaps.create!(
-        title: "Algebra master", 
-        description: "Hell on earth but I know Algebra",
-        user_id: 5)
-#   skill << category[5].skills.create!(name: 'Calculus')
-#   skill << category[5].skills.create!(name: 'Geometry')
-
-category << Category.create!(name: 'Crafts')
-  skill << category[6].skills.create!(name: 'Knitting')
-     roadmap << skill[12].roadmaps.create!(
-        title: "Learn how to knit", 
-        description: "This is how I learned to knit",
-        user_id: 1)
-     roadmap << skill[12].roadmaps.create!(
-        title: "I love yarn - you will too!", 
-        description: "[description of roadmap]",
-        user_id: 2)
-     roadmap << skill[12].roadmaps.create!(
-        title: "Knit like your grandma!", 
-        description: "Scarves and sweaters galore",
-        user_id: 3)
