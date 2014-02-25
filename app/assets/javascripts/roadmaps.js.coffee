@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+jQuery ->
+  skills = $('#roadmap_skill_id').html()
+  $('#roadmap_category_id').change ->
+    category = $('#roadmap_category_id :selected').text()
+    options = $(skills).filter("optgroup[label='#{category}']").html()
+    if options
+      $('#roadmap_skill_id').html(options)
+      $('#roadmap_skill_id').parent().show()
+    else
+      $('#roadmap_skill_id').empty()
+      $('#roadmap_skill_id').parent().hide()

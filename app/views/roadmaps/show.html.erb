@@ -3,11 +3,11 @@
 <h1><%= @roadmap.title %></h1><br>
 <%= image_tag @roadmap.image(:medium) %><br>
 <%= @roadmap.description %><br>
-<% @roadmap.resources.each do |resource| %>
-  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %> <br>
+<%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
+<%= link_to "Edit Roadmap", edit_roadmap_path(@roadmap) %><br>
+<%= link_to "Delete Roadmap", roadmap_path(@roadmap), method: :delete %><br>
+<br>
+<% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
+  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %><br>
 <% end %>
 </div>
-<br>
-<%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
-<%= link_to "Edit", edit_roadmap_path(@roadmap) %><br>
-<%= link_to "Delete", roadmap_path(@roadmap), method: :delete %>

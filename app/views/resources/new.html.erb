@@ -1,7 +1,8 @@
 <%= link_to "Home", root_path %>
 <%= simple_form_for @resource, method: :post, url: roadmap_resources_path do |f| %>
-	  <%= f.input :name, as: :string %><br>
-	  <%= f.input :url, as: :string %><br>
-	  <%= f.input :description, as: :text %><br>
+      <%= f.input :position_id, as: :hidden, :input_html => { :value => @new_position } %>
+	  <%= f.input :name, as: :string, placeholder: "Resource Name" %><br>
+	  <%= f.input :url, as: :string, placeholder: "URL for Resource"%><br>
+	  <%= f.input :description, as: :text, placeholder: "Resource Description" %><br>
 	  <%= f.button :submit %>
 <% end %>
