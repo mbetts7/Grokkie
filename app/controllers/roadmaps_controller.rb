@@ -35,6 +35,13 @@ class RoadmapsController < ApplicationController
     redirect_to root_url
   end
 
+  def upvote
+    session[:return_to] ||= request.referer
+    roadmap = Roadmap.find(params[:id])
+    roadmap.liked_by current_user
+    redirect_to session.delete(:return_to)
+  end
+
   private 
 
   def roadmap_params
