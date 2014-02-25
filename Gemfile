@@ -39,3 +39,5 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 
 gem "paperclip", "~> 4.1"
 gem "aws-sdk", "~> 1.34.1"
+
+gem 'quiet_assets', :group => :development
