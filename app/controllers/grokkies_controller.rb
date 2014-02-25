@@ -7,7 +7,9 @@ class GrokkiesController < ApplicationController
     @random_roadmaps = []
     36.times do
       roadmap = Roadmap.find(rand(1..roadmap_max))
-      @random_roadmaps << roadmap
+      (@random_roadmaps << roadmap).uniq
+      
+
     end
     
   end
