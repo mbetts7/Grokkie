@@ -45,6 +45,6 @@ class RoadmapsController < ApplicationController
   private 
 
   def roadmap_params
-    params.require(:roadmap).permit(:title, :description, :skill_id, :image)
+    params.require(:roadmap).permit(:title, :description, :skill_id, :image, :category_id)
   end
 end
