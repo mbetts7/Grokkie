@@ -232,4 +232,3 @@ category << Category.create!(name: 'Cooking')
 #   skill << category[2].skills.create!(name: 'Deep Fry')
 #   skill << category[2].skills.create!(name: 'Stir Fry')
 #   skill << category[2].skills.create!(name: 'Salad Making')
-
