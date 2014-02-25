@@ -20,6 +20,7 @@ resources = []
 
 # Programming/Javascript/Java-Java-Time/Resources
 category << Category.create!(name: 'Programming')
+
   skill << category[0].skills.create!(name: 'Javascript')
     # roadmaps for Javascript
     roadmap << skill[0].roadmaps.create!(title: "FIRST ROADMAP: The Real Deal Javascript Roadmap", 
@@ -75,43 +76,145 @@ category << Category.create!(name: 'Programming')
       title: "The easy way to learn JS", 
       description: "[description of roadmap]")
     roadmap << skill[0].roadmaps.create!(
-      title: "[roadmap title]", 
+      title: "Roadmap 1", 
       description: "[description of roadmap]")
     roadmap << skill[0].roadmaps.create!(
-      title: "[roadmap title]", 
+      title: "Roadmap 2", 
       description: "[description of roadmap]")
     roadmap << skill[0].roadmaps.create!(
-      title: "[roadmap title]", 
+      title: "Roadmap 3", 
       description: "[description of roadmap]")
     roadmap << skill[0].roadmaps.create!(
-      title: "[roadmap title]", 
+      title: "Roadmap 4", 
       description: "[description of roadmap]")
+
   skill << category[0].skills.create!(name: 'Ruby')
+    roadmap << skill[1].roadmaps.create!(
+      title: "Rubilicious", 
+      description: "This is how I learned Ruby really fast")
+    roadmap << skill[1].roadmaps.create!(
+      title: "Exploring Ruby", 
+      description: "[description of roadmap]")
+    roadmap << skill[1].roadmaps.create!(
+      title: "The easy way to learn Ruby", 
+      description: "[description of roadmap]")
+
   skill << category[0].skills.create!(name: 'Rails')
+    roadmap << skill[2].roadmaps.create!(
+      title: "Rails mastery", 
+      description: "This is how I learned Ruby really fast")
+    roadmap << skill[2].roadmaps.create!(
+      title: "Exploring Rails", 
+      description: "[description of roadmap]")
+    roadmap << skill[2].roadmaps.create!(
+      title: "The easy way to learn Rails", 
+      description: "[description of roadmap]")
+
   skill << category[0].skills.create!(name: 'CSS')
-  skill << category[0].skills.create!(name: 'Getting Started in Programming')
+   roadmap << skill[3].roadmaps.create!(
+      title: "CSS mastery", 
+      description: "This is how I learned Ruby really fast")
+    roadmap << skill[3].roadmaps.create!(
+      title: "Exploring CSS", 
+      description: "[description of roadmap]")
+    roadmap << skill[3].roadmaps.create!(
+      title: "The easy way to learn CSS", 
+      description: "[description of roadmap]")
+
   skill << category[0].skills.create!(name: 'Python')
+   roadmap << skill[4].roadmaps.create!(
+      title: "Python mastery", 
+      description: "This is how I learned Python really fast")
+    roadmap << skill[4].roadmaps.create!(
+      title: "Exploring Python", 
+      description: "[description of roadmap]")
+    roadmap << skill[4].roadmaps.create!(
+      title: "The easy way to learn Python", 
+      description: "[description of roadmap]")
 
  
 # more categories and skills for display purposes
 category << Category.create!(name: 'Fitness')
+
   skill << category[1].skills.create!(name: 'Cross-fit')
+    roadmap << skill[5].roadmaps.create!(
+      title: "Crossfit mastery", 
+      description: "This is how I learned to lift really heavy stuff")
+    roadmap << skill[5].roadmaps.create!(
+      title: "Getting ripped", 
+      description: "[description of roadmap]")
+    roadmap << skill[5].roadmaps.create!(
+      title: "The easy way to learn Crossfit", 
+      description: "[description of roadmap]")
+
   skill << category[1].skills.create!(name: 'Bull riding')
-  skill << category[1].skills.create!(name: 'Body-Building')
+    roadmap << skill[6].roadmaps.create!(
+      title: "Rodeo master", 
+      description: "This is how I learned to not fall off")
+    roadmap << skill[6].roadmaps.create!(
+      title: "Buckin' bronco", 
+      description: "[description of roadmap]")
+    roadmap << skill[6].roadmaps.create!(
+      title: "The easy way to learn bull-riding", 
+      description: "[description of roadmap]")
+
+  # skill << category[1].skills.create!(name: 'Body-Building')
 category << Category.create!(name: 'Cooking')
+
   skill << category[2].skills.create!(name: 'Water Boiling')
+    roadmap << skill[7].roadmaps.create!(
+      title: "Boiling water like a true chef", 
+      description: "This is how I learned to lift really heavy stuff")
+    roadmap << skill[7].roadmaps.create!(
+      title: "Boiling point", 
+      description: "[description of roadmap]")
+    roadmap << skill[7].roadmaps.create!(
+      title: "The easy way to learn how to boil water", 
+      description: "[description of roadmap]")
+
   skill << category[2].skills.create!(name: 'Deep Fry')
-  skill << category[2].skills.create!(name: 'Stir Fry')
-  skill << category[2].skills.create!(name: 'Salad Making')
+    roadmap << skill[8].roadmaps.create!(
+      title: "Fry to a deep golden brown", 
+      description: "This is how I learned to make fried goodness")
+    roadmap << skill[8].roadmaps.create!(
+      title: "Beware the smoke point: Deep-frying", 
+      description: "[description of roadmap]")
+    roadmap << skill[8].roadmaps.create!(
+      title: "McDonald's has nothing on me", 
+      description: "[description of roadmap]")
+  # skill << category[2].skills.create!(name: 'Stir Fry')
+  # skill << category[2].skills.create!(name: 'Salad Making')
+
 category << Category.create!(name: 'Languages')
-  skill << category[3].skills.create!(name: 'French')
-  skill << category[3].skills.create!(name: 'Spanish')
+
   skill << category[3].skills.create!(name: 'English')
-  skill << category[3].skills.create!(name: 'German')
+    roadmap << skill[9].roadmaps.create!(
+      title: "Me talk pretty", 
+      description: "This is how I learned to speak English")
+    roadmap << skill[9].roadmaps.create!(
+      title: "I do grammar good", 
+      description: "[description of roadmap]")
+    roadmap << skill[9].roadmaps.create!(
+      title: "The King's Speech", 
+      description: "[description of roadmap]")
+  # skill << category[3].skills.create!(name: 'Spanish')
+  # skill << category[3].skills.create!(name: 'French')
+  # skill << category[3].skills.create!(name: 'German')
+
 category << Category.create!(name: 'Sciences')
+
   skill << category[4].skills.create!(name: 'Chemistry')
-  skill << category[4].skills.create!(name: 'Biology')
-category << Category.create!(name: 'Math')
-  skill << category[5].skills.create!(name: 'Algebra')
-  skill << category[5].skills.create!(name: 'Calculus')
-  skill << category[5].skills.create!(name: 'Geometry')
+     roadmap << skill[10].roadmaps.create!(
+      title: "Molecules and whatnot", 
+      description: "This is how I learned to speak English")
+    roadmap << skill[10].roadmaps.create!(
+      title: "Bonds", 
+      description: "[description of roadmap]")
+    roadmap << skill[10].roadmaps.create!(
+      title: "Organic Chemistry", 
+      description: "Hell on earth")
+  # skill << category[4].skills.create!(name: 'Biology')
+# category << Category.create!(name: 'Math')
+#   skill << category[5].skills.create!(name: 'Algebra')
+#   skill << category[5].skills.create!(name: 'Calculus')
+#   skill << category[5].skills.create!(name: 'Geometry')
