@@ -11,9 +11,9 @@
 
   <div class="small-10 medium-8 medium-centered large-8 large-centered columns">
       <%= simple_form_for (@roadmap), html: { class: 'new_roadmap_form' } do |f| %>
-          <%= f.association :skill %>
       	  <%= f.input :title, as: :string, :placeholder=> "Name your Roadmap" %>
       	  <%= f.input :description, as: :text, :placeholder=> "Description" %>
+          <%= f.association :skill, prompt: "Specify a skill" %>
           <div id="mobile_bar"></div>
       	  <%= f.button :submit, value: "Create" %>
        <% end %>
