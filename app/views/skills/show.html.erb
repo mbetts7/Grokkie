@@ -4,5 +4,5 @@
 <% @skill.roadmaps.each do |roadmap| %>
 	<%= link_to roadmap.title, roadmap_path(roadmap.id) %><br>
 	<%= roadmap.description %> <br>
-	vote = <%= roadmap.vote %><br>
+	vote = <%= roadmap.votes.size %> - <%=button_to "Upvote", vote_roadmap_path(roadmap), method: :put %><br>
 <% end %>
