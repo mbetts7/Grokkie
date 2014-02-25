@@ -4,17 +4,57 @@
   text-align: center;
 }
 
-form {
-    font-size: 0;
+#home_link {
+  margin: 15px auto;
+}
+#roadmap_skill_id {
+  border: none;  
 }
 
-form input {
-    font-size: 12px;
+#roadmap_title {
+  font-size: 16px;
+  border: none;
+
 }
 
-@media (min-width: 540px) and (max-width: 1024px) {
-  .new_roadmap_form {
-    
+#roadmap_description {
+  font-size: 16px;
+  border: none; 
+}
+
+.btn {
+  font-size: 12px;
+  
+}
+
+@media (max-width: 628px) {
+
+  body {
+    background-color: white;
   }
-}
 
+  #mobile_bar {
+    width: 100%;
+    height:1px;
+    background-color: grey; 
+  }
+
+  .btn {
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+    color: grey;
+  }
+
+
+  #roadmap_title {
+    background-color: transparent;
+    -webkit-appearance: caret;
+  }
+
+  #roadmap_description {
+    background-color: transparent;
+    -webkit-appearance: caret;
+  }
+
+}
