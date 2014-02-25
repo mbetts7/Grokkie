@@ -3,7 +3,7 @@ class GrokkiesController < ApplicationController
   	@categories = Category.all
    
     roadmaps = Roadmap.all
-    @random_roadmaps = Roadmap.all.sample(6)
-    
+    @random_roadmaps = roadmaps.sample(6)
+    @users = User.all
   end
 end
