@@ -214,7 +214,30 @@ category << Category.create!(name: 'Sciences')
       title: "Organic Chemistry", 
       description: "Hell on earth")
   # skill << category[4].skills.create!(name: 'Biology')
-# category << Category.create!(name: 'Math')
-#   skill << category[5].skills.create!(name: 'Algebra')
+
+category << Category.create!(name: 'Math')
+
+   skill << category[5].skills.create!(name: 'Algebra')
+     roadmap << skill[11].roadmaps.create!(
+        title: "Learn algebra", 
+        description: "This is how I learned algebra")
+     roadmap << skill[11].roadmaps.create!(
+        title: "x is equal to y", 
+        description: "[description of roadmap]")
+     roadmap << skill[11].roadmaps.create!(
+        title: "Algebra master", 
+        description: "Hell on earth")
 #   skill << category[5].skills.create!(name: 'Calculus')
 #   skill << category[5].skills.create!(name: 'Geometry')
+
+category << Category.create!(name: 'Crafts')
+  skill << category[6].skills.create!(name: 'Knitting')
+     roadmap << skill[12].roadmaps.create!(
+        title: "Learn how to knit", 
+        description: "This is how I learned to knit")
+     roadmap << skill[12].roadmaps.create!(
+        title: "x is equal to y", 
+        description: "[description of roadmap]")
+     roadmap << skill[12].roadmaps.create!(
+        title: "Knit like your grandma!", 
+        description: "Hell on earth")
