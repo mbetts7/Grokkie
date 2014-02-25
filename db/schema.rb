@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140224192847) do
-=======
 ActiveRecord::Schema.define(version: 20140224225342) do
->>>>>>> add_logic
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +38,11 @@ ActiveRecord::Schema.define(version: 20140224225342) do
 
   add_index "comments", ["roadmap_id"], name: "index_comments_on_roadmap_id", using: :btree
 
+  create_table "favorites", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "resources", force: true do |t|
     t.text     "name"
     t.string   "url"
@@ -51,10 +52,6 @@ ActiveRecord::Schema.define(version: 20140224225342) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "image_url"
-    t.string   "attachment_file_name"
-    t.string   "attachment_content_type"
-    t.integer  "attachment_file_size"
-    t.datetime "attachment_updated_at"
   end
 
   add_index "resources", ["roadmap_id"], name: "index_resources_on_roadmap_id", using: :btree
