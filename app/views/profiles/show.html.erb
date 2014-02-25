@@ -1,13 +1,28 @@
-<% photo = @profile.image %>
-Image:<image src=<%= "#{@profile.image}" %> /><br>
+<div id="profile_show_container">
+  <div class="row">
+    <div class="small-12 medium-5 large-5 columns" id="user_profile_left_column">
+        <% photo = @profile.image %>
+        <div class="small-6 medium-6 large-6 columns">Image:<image src=<%= "#{@profile.image}" %> /></div>
+        <div class="small-6 medium-6 large-6 columns">Username: <%= @profile.username %></div>
+        <div class="small-6 medium-6 large-6 columns">Twitter: <%= @profile.twitter_name %></div>
+        <div class="small-6 medium-6 large-6 columns">Github: <%= @profile.github_name %></div>
+    </div> 
+    <div class="small-12 medium-6 large-6 columns" id="user_profile_right_column"> 
+        <div>Learning Style: <%= @profile.learning_style %></div>
+        <div>Bio: <%= @profile.bio %></div>
+    </div>
+  </div>
 
-Username: <%= @profile.username %><br>
-Twitter: <%= @profile.twitter_name %><br>
-Github: <%= @profile.github_name %><br>
-Learning Style: <%= @profile.learning_style %><br>
-Bio: <%= @profile.bio %><br>
+  <div class="row"> 
+    <div class="small-12 medium-12 large-12 columns" id="user_profile_body">
+      users roadmaps
+    </div>
+  </div>
 
-<% if current_user == @profile %>
-<%= link_to "Edit Profile", edit_profile_path(@profile) %><br>
-<%= link_to "Account Settings", edit_user_registration_path %><br>
-<% end %>
+  <div>
+    <% if current_user == @profile %>
+    <%= link_to "Edit Profile", edit_profile_path(@profile) %><br>
+    <%= link_to "Account Settings", edit_user_registration_path %><br>
+    <% end %>
+</div>
+</div>

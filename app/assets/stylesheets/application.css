@@ -20,6 +20,10 @@
  /* APLICATION STYLE */
 /****************/
 
+* {
+  border: 1px solid black;
+}
+
 body {
   color: #435160;
   font-family: 'Open Sans', sans-serif;
@@ -81,6 +85,26 @@ body {
   margin-left: 20px;
   color: #fff;
 }
+
+
+/* USER PROFILE SHOW PAGE */
+
+#profile_show_container {
+  margin-top: 10%;
+}
+
+#user_profile_left_column {
+  margin: 10px;
+  padding: 10px;
+}
+
+#user_profile_right_column {
+  margin:10px;
+  padding: 10px;
+  
+}
+
+/* MEDIA QUERIES */
 
 @media (min-width: 400px) and (max-width: 782px) {
 
