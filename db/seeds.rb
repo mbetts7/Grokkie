@@ -17,6 +17,7 @@ resources = []
 # users << User.create!(email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
 
 
+
 # Programming/Javascript/Java-Java-Time/Resources
 category << Category.create!(name: 'Programming')
   skill << category[0].skills.create!(name: 'Javascript')

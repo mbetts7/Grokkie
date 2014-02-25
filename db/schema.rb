@@ -97,6 +97,11 @@ ActiveRecord::Schema.define(version: 20140224223348) do
     t.string   "provider"
     t.string   "uid"
     t.string   "username"
+    t.string   "twitter_name"
+    t.string   "github_name"
+    t.text     "bio"
+    t.string   "learning_style"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

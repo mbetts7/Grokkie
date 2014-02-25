@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+gem 'rails_12factor', :group => :production
+
 gem 'pg'
 gem 'simple_form'
 gem 'devise'
@@ -54,8 +56,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
-gem 'hashie'
 
 gem "paperclip", "~> 4.1"
 gem "aws-sdk", "~> 1.34.1"
