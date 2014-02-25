@@ -5,7 +5,7 @@ class GrokkiesController < ApplicationController
     roadmaps = Roadmap.all
     roadmap_max = roadmaps.length
     @random_roadmaps = []
-    6.times do
+    36.times do
       roadmap = Roadmap.find(rand(1..roadmap_max))
       @random_roadmaps << roadmap
     end
