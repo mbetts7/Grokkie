@@ -11,6 +11,105 @@
  *= require foundation
  *= require_self
  *= require foundation_and_overrides
+ *= require font-awesome
 
  *= require_tree .
  */
+
+/******************/
+ /* APLICATION STYLE */
+/****************/
+
+body {
+  color: #435160;
+  font-family: 'Open Sans', sans-serif;
+  }
+
+/**********************/
+ /*SIGN IN & SIGN UP FORM */
+/**********************/
+
+.login_wrapper {
+  background-image: url("login_background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login_form {
+    padding: 20px 0px;
+    background: white;
+    box-shadow: 2px;
+    -webkit-box-shadow: 2px;
+    -moz-box-shadow: 2px;
+    color: #6D7781;
+    font-size: 16px;
+    margin-top: 10%;
+}
+
+.login_form h3 {
+  font-size: 18px;
+  padding: 20px 0;
+  color:#1FCE6D;
+}
+
+.user_remember_me {
+  margin-left: -120px;
+}
+
+#submit_button {
+  background: #1FCE6D;
+  width: 45%;
+  height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 16px;
+  padding-top: 3px;
+}
+
+#submit_button input[type="submit"] {
+  font-size: 18px;
+  width: 85%;
+  border: none;
+  margin-left: 20px;
+  color: #fff;
+}
+
+@media (min-width: 400px) and (max-width: 782px) {
+
+  #submit_button {
+  padding-left:20px;
+  
+  }
+
+  #submit_button input[type="submit"] {
+  font-size: 16px;
+  margin: 2px;
+  }
+}
+
+@media (max-width: 628px) {
+
+  #submit_button {
+  padding-left:20px;
+  }
+
+  #submit_button input[type="submit"] {
+  font-size: 12px;
+  width: 90%;
+  margin: 0 auto;
+  }
+
+}
+
+
+
+
+
