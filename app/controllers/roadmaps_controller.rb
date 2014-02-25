@@ -1,4 +1,5 @@
 class RoadmapsController < ApplicationController
+  before_filter :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
   def new
     @roadmap = Roadmap.new()
   end
