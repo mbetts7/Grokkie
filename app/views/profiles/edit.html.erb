@@ -1,4 +1,4 @@
-<%= simple_form_for @profile do |f| %>
+<%= simple_form_for :profile, method: :patch, url: profile_path do |f| %>
 	  <%= f.input :username, as: :string %><br>
 	  <%= f.input :twitter_name, as: :string %><br>
 	  <%= f.input :github_name, as: :string %><br>
