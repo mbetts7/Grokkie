@@ -9,6 +9,9 @@ Grokkie::Application.routes.draw do
   end
 
   resources :roadmaps do
+  	member do
+  		put "vote", to: "roadmaps#upvote"
+  	end
     resources :comments, :resources
   end
 end

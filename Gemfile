@@ -4,6 +4,8 @@ gem 'rails', '4.0.2'
 
 gem 'rails_12factor', :group => :production
 
+gem 'acts_as_votable', '~> 0.8.0'
+
 gem 'pg'
 gem 'simple_form'
 gem 'devise'
