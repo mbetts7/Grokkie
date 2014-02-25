@@ -4,7 +4,7 @@ class RoadmapsController < ApplicationController
   end
 
   def create
-    new_roadmap = Roadmap.new(roadmap_params)
+    new_roadmap = current_user.roadmaps.build(roadmap_params)
     if new_roadmap.save
        redirect_to roadmap_path(new_roadmap)
     else

@@ -8,7 +8,6 @@ class ResourcesController < ApplicationController
   def create
     roadmap = Roadmap.find(params[:roadmap_id])
     new_resource = roadmap.resources.create(resource_params)
-    binding.pry
     redirect_to roadmap_resource_path(roadmap, new_resource)
   end
 
