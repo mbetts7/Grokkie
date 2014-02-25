@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
 	def show
 		id = params[:id]
+		if id == "sign_out"
+			redirect_to destroy_user_session_path
+		else
 		@profile = User.find(id)
+	    end
 	end
 
 	def edit
