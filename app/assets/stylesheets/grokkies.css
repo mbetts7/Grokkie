@@ -125,8 +125,8 @@
   .about_us_column p {
   font-size: 12px;
   line-height: 14px;
-}
-
+  }
+ }
 @media (max-width: 540px) {
   #navbar_actions li {
     margin: 1px;
