@@ -18,6 +18,11 @@
 #  provider               :string(255)
 #  uid                    :string(255)
 #  username               :string(255)
+#  twitter_name           :string(255)
+#  github_name            :string(255)
+#  bio                    :text
+#  learning_style         :string(255)
+#  image                  :string(255)
 #
 
 require 'spec_helper'

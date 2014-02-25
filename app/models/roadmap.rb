@@ -26,8 +26,8 @@ class Roadmap < ActiveRecord::Base
       thumb: '100x100>',
       square: '200x200#',
       medium: '300x300>', 
-      }   
-    # ,default_url: '/images/background1.jpeg'
+      },   
+    default_url: 'assets/images/background1.jpeg'
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
