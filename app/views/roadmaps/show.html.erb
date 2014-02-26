@@ -9,7 +9,8 @@
 <br>
 </div>
 
-<% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %><br>
-<% end %>
-
+<div id = "sortable" >
+<% @resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
+  <%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
+  <% end %>
+</div>

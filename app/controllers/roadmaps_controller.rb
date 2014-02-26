@@ -20,17 +20,21 @@ class RoadmapsController < ApplicationController
   def show
     id = params[:id]
     @roadmap = Roadmap.find(id)
+    @resources = @roadmap.resources.all
+    respond_to do |f| 
+          f.html
+          f.json {render :json}
+      end
 
   end
 
-  def update_resource_positions
+  def update_positions
       params[:position].each_with_index do |resource, index|
-        roadmap = Roadmap.find(params[:id])
-        resource = roadmap.resources.find(resource[:id])
-        resource.update_attributes(:position, index)
+        resource = Resource.find(resource[:id])
+        resource.update_attribute(:position_id, index)
       end
       respond_to do |f| 
-          f.json {render :json}
+          f.json {render json: {:success => "success"}}
       end
   end
 

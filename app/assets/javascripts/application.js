@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
@@ -28,7 +29,7 @@ $(function(){
 			$.ajax({
 				type: "POST",
 				contentType: "application/json",
-				url: "/roadmaps/edit/update_positions/",
+				url: "/roadmaps/update_positions",
 				data: JSON.stringify({position:data}),
 			});
 
