@@ -8,8 +8,9 @@ Search bar (M)<br>
 <%= @resource.url %><br>
 <%= @resource.description %><br>
 <!-- paperclip -->
-<% if @resource.attachment.present? %>
-  <%= image_tag @resource.attachment(:square) %><br>
+<% if @resource.image.present? %>
+  <%= image_tag @resource.image(:square) %><br>
+  <%= link_to @resource.image.url %><br>
 <% end %>
 <!-- paperclip -->
 <%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %><br>

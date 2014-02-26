@@ -14,6 +14,8 @@
 #  image_content_type :string(255)
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  user_id            :integer
+#  category_id        :integer
 #
 
 class Roadmap < ActiveRecord::Base
