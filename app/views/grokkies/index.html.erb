@@ -42,15 +42,22 @@
 
 <!-- Need to fix this dropdown bar for each category and sub-skill -->
   <div class="small-12 medium-8 large-8 columns" id="featured_categories">
-    	<% @categories.each do |category| %>
-          <a href="#" data-dropdown="drop"><li><%= category.name %></li></a>
+    <ul>
+      <a href="#" data-dropdown="drop1"><li>Programming</li></a>
+        <ul id="drop1" class="f-dropdown" data-dropdown-content> 
+          <a href="/"><li></li></a>
+          <% end %>
+        </ul>
+      <a href="#" data-dropdown="drop2"><li>Programming</li></a>
+      <a href="#" data-dropdown="drop3"><li>Programming</li></a>
+      <a href="#" data-dropdown="drop4"><li>Programming</li></a>
+      <a href="#" data-dropdown="drop5"><li>Programming</li></a>
+      <a href="#" data-dropdown="drop6"><li>Programming</li></a>
+      <a href="#" data-dropdown="drop7"><li>Programming</li></a>
+    </ul>
+          
     
-      <ul id="drop" class="f-dropdown" data-dropdown-content> 
-          <%category.skills.each do |skill| %>
-  	      <li><%=link_to skill.name, category_skill_path(category, skill)%></li>
-  	    <% end %>
-      </ul>
-  	<% end %>
+      
   </div>
 </div>
 
