@@ -113,11 +113,20 @@
 
 @media (min-width: 540px) and (max-width: 1024px) {
 
-  .featured_roadmaps td:last-child {
-    /*margin-right: 158px;*/
+  .about_us_column {
+  height: 130px;
+  width: 200px;
+  text-align: center;
+  border-radius: 1px; 
+  margin: 0 10px;
+  background-color: #0c84cc; 
   }
-}
 
+  .about_us_column p {
+  font-size: 12px;
+  line-height: 14px;
+  }
+ }
 @media (max-width: 540px) {
   #navbar_actions li {
     margin: 1px;
@@ -131,9 +140,6 @@
     margin: 0 5px;
   }  
 
-  .featured_roadmaps td:last-child {
-    margin-right: 23px;
-  }
 }
 
 

@@ -7,7 +7,10 @@
 <%= link_to "Edit Roadmap", edit_roadmap_path(@roadmap) %><br>
 <%= link_to "Delete Roadmap", roadmap_path(@roadmap), method: :delete %><br>
 <br>
-<% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-  <%= link_to resource.name, roadmap_resource_path(@roadmap, resource) %><br>
-<% end %>
+</div>
+
+<div id = "sortable" >
+<% @resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
+  <%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
+  <% end %>
 </div>

@@ -14,4 +14,5 @@ Grokkie::Application.routes.draw do
   	end
     resources :comments, :resources
   end
+  post "/roadmaps/update_positions" => "roadmaps#update_positions"
 end
