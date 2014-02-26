@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
-
+gem 'coffee-rails'
 gem 'foundation-rails'
 
 gem 'font-awesome-rails'
