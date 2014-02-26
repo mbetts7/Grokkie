@@ -10,8 +10,9 @@ Search bar (M)<br>
 <!-- paperclip -->
 <% if @resource.image.present? %>
   <%= image_tag @resource.image(:square) %><br>
-  <%= link_to "View full image", @resource.image.url %><br>
+  <%= link_to "View full image", @resource.image.url, :target => "_blank" %><br>
 <% end %>
+<%= link_to "download document", @resource.attachment.url(:original, false), :target => "_blank" %><br>
 <!-- paperclip -->
 <%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %><br>
 <%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>

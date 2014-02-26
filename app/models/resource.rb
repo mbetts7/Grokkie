@@ -27,7 +27,7 @@ class Resource < ActiveRecord::Base
 # Adding an document to resource
     has_attached_file :attachment
 
-    validates_attachment_content_type :attachment, :content_type => ["application/pdf", "application/doc", "application/txt", "application/md"]
+    validates_attachment_content_type :attachment, content_type: "application/pdf"
       
 # Adding an image to resource
     has_attached_file :image, styles: { 
