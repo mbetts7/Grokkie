@@ -8,7 +8,7 @@
     </div>
     <div class="row">
       <ul class="small-4 small-centered columns breadcrumbs">
-        <li><%= link_to @roadmap.skill.name %></li> <li><%= link_to @roadmap.skill.category.name %></li>
+        <li><%= @roadmap.skill.category.name %></li><li><%=@roadmap.skill.name %></li> 
       </ul>
     </div>
     <div>
@@ -35,11 +35,11 @@
             <%= link_to roadmap_path(@roadmap), method: :delete do %><i class="fa fa-trash-o"></i><%end%>
             <%= link_to edit_roadmap_resource_path(@roadmap, resource.id) do %><i class="fa fa-pencil-square-o"></i><%end%>
           </div>
-          <%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
+          <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
         <% end %>
       </div>
     </div>
-  </div>x
+  </div>
 </div>
 
 

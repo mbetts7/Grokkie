@@ -50,7 +50,7 @@ class RoadmapsController < ApplicationController
   def destroy
     id = params[:id]
     Roadmap.find(id).destroy
-    redirect_to root_url
+    redirect_to profile_path(current_user)
   end
 
   def upvote
