@@ -4,5 +4,9 @@
 	  <%= f.input :name, as: :string, placeholder: "Resource Name" %><br>
 	  <%= f.input :url, as: :string, placeholder: "URL for Resource"%><br>
 	  <%= f.input :description, as: :text, placeholder: "Resource Description" %><br>
+    <!-- paperclip -->
+    <%= f.label :attachment %>
+    <%= f.file_field :attachment %><br>
+    <!-- paperclip -->
 	  <%= f.button :submit %>
 <% end %>

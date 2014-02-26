@@ -24,8 +24,10 @@ class Resource < ActiveRecord::Base
       thumb: '100x100>',
       square: '200x200#',
       medium: '300x300>', 
-      },   
-    default_url: 'assets/images/background1.jpeg'
+      }
+    
+    #uncomment if you want default_url
+    # default_url: 'login_background.jpg'
 
   validates_attachment_content_type :attachment, :content_type => [/\Aimage\/.*\Z/, "application/pdf", "application/doc", "application/txt", "application/md"]
   
