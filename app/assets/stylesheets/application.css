@@ -206,6 +206,14 @@ body {
 
 }
 
+#sortable p {
+  border: 1px solid black;
+}
+
+#sortable {
+  border: 1px solid black;
+}
+
 
 
 

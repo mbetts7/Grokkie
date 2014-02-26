@@ -6,7 +6,7 @@
     <div class="medium-6 large-4 columns" id="navbar_actions">
       <ul>
         <% if user_signed_in? %>
-        <li><%= link_to "My Profile", profile_path(current_user) %></li>
+        <li><%= link_to current_user.username, profile_path(current_user) %></li>
         <li><%= button_to "Sign Out", destroy_user_session_path, :method => :delete %>
           <% else %>
         <li><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -89,39 +89,5 @@
         </div>
       </td>
       <% end %>
-
-      <td class="small-10 medium-5 large-3 columns">
-        <div class="row">
-          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <a href=""><p>Username<p></a> 
-          </div>
-          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <p>votes<p>
-          </div>
-        </div>
-        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
-          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
-        </div>
-        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
-          <a href=""><img src="">This is a potenial image for the roadmap</a> 
-        </div>
-      </td>
-
-      <td class="small-10 medium-5 large-3 columns end">
-        <div class="row">
-          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <a href=""><p>Username<p></a> 
-          </div>
-          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <p>votes<p>
-          </div>
-        </div>
-        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
-          <a href=""><h5>This is a potenial title for the roadmap</h5></a>
-        </div>
-        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
-          <a href=""><img src="">This is a potenial image for the roadmap</a> 
-        </div>
-      </td>
     </tr>
   </table>
