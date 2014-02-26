@@ -1,11 +1,13 @@
-<%= link_to "Home", root_path %>
-<%= simple_form_for [@roadmap, @resource] do |f| %>
-	  <%= f.input :name, as: :string %><br>
-	  <%= f.input :url, as: :string %><br>
-	  <%= f.input :description, as: :text %><br>
-    <!-- paperclip -->
-    <%= f.label :attachment %>
-    <%= f.file_field :attachment %><br>
-    <!-- paperclip -->
-	  <%= f.button :submit %>
-<% end %>
+<div id="">
+  <%= link_to "Home", root_path %>
+  <%= simple_form_for [@roadmap, @resource] do |f| %>
+  	  <%= f.input :name, as: :string %><br>
+  	  <%= f.input :url, as: :string %><br>
+  	  <%= f.input :description, as: :text %><br>
+      <!-- paperclip -->
+      <%= f.label :attachment %>
+      <%= f.file_field :attachment %><br>
+      <!-- paperclip -->
+  	  <%= f.button :submit %>
+  <% end %>
+</div>

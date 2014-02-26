@@ -4,7 +4,7 @@
       <div class="small-12 medium-5 large-5 columns" id="user_profile_left_column">
         <h5>PROFILE</h5>
         <% photo = @profile.image %>
-        <div class="small-6 medium-6 large-6 columns" id="profile_img">Image:<image src= <%= "#{@profile.image}" %> /></div>
+        <div class="small-6 medium-6 large-6 columns" id="profile_img"><image src= <%= "#{@profile.image}" %> /></div>
         <ul class="small-6 medium-6 large-4 columns">
           <li><i class="fa fa-user"></i><%= @profile.username %></li>
           <li><i class="fa fa-twitter"></i><span><%= @profile.twitter_name %></li>

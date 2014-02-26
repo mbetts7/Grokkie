@@ -39,7 +39,7 @@ body {
   font-size: 100%; }
 
 body {
-  background-color: #dfe5ea;
+  background-color: whitesmoke;
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -1337,7 +1337,8 @@ meta.foundation-mq-topbar {
   border-style: solid;
   border-width: 1px;
   background-color: whitesmoke;
-  border-color: #dddddd;
+  border: none;
+  /*border-color: #dddddd;*/
   -webkit-border-radius: 3px;
   border-radius: 3px; }
   .breadcrumbs > * {
