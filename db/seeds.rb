@@ -19,7 +19,7 @@ users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', pas
 
 
 # Programming/Javascript/Java-Java-Time/Resources
-category << Category.create!(name: 'Programming')
+category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-laptop fa-5x"></i>')
 
   skill << category[0].skills.create!(name: 'Javascript')
     # roadmaps for Javascript
@@ -137,7 +137,7 @@ category << Category.create!(name: 'Programming')
   skill << category[0].skills.create!(name: 'CSS')
    roadmap << skill[3].roadmaps.create!(
       title: "CSS mastery", 
-      description: "This is how I learned Ruby really fast",
+      description: "This is how I learned CSS really fast",
       user_id: 1)
     roadmap << skill[3].roadmaps.create!(
       title: "Exploring CSS", 
@@ -164,7 +164,7 @@ category << Category.create!(name: 'Programming')
 
  
 # more categories and skills for display purposes
-category << Category.create!(name: 'Fitness')
+category << Category.create!(name: 'Fitness', image_url: '<i class="fa fa-dribbble fa-5x"></i>')
 
   skill << category[1].skills.create!(name: 'Cross-fit')
     roadmap << skill[5].roadmaps.create!(
@@ -172,7 +172,7 @@ category << Category.create!(name: 'Fitness')
       description: "This is how I learned to lift really heavy stuff",
       user_id: 2)
     roadmap << skill[5].roadmaps.create!(
-      title: "Getting ripped", 
+      title: "Getting ripped with Crossfit", 
       description: "[description of roadmap]",
       user_id: 4)
     roadmap << skill[5].roadmaps.create!(
@@ -183,7 +183,7 @@ category << Category.create!(name: 'Fitness')
   skill << category[1].skills.create!(name: 'Bull riding')
     roadmap << skill[6].roadmaps.create!(
       title: "Rodeo master", 
-      description: "This is how I learned to not fall off",
+      description: "This is how I learned to not fall off when riding a bull",
       user_id: 1)
     roadmap << skill[6].roadmaps.create!(
       title: "Buckin' bronco", 
@@ -195,12 +195,12 @@ category << Category.create!(name: 'Fitness')
       user_id: 2)
 
   # skill << category[1].skills.create!(name: 'Body-Building')
-category << Category.create!(name: 'Cooking')
+category << Category.create!(name: 'Cooking', image_url: '<i class="fa fa-cutlery fa-5x"></i>')
 
   skill << category[2].skills.create!(name: 'Water Boiling')
     roadmap << skill[7].roadmaps.create!(
       title: "Boiling water like a true chef", 
-      description: "This is how I learned to lift really heavy stuff",
+      description: "This is how I learned to boil stuff",
       user_id: 1)
     roadmap << skill[7].roadmaps.create!(
       title: "Boiling point", 
@@ -211,9 +211,9 @@ category << Category.create!(name: 'Cooking')
       description: "[description of roadmap]",
       user_id: 3)
 
-  skill << category[2].skills.create!(name: 'Deep Fry')
+  skill << category[2].skills.create!(name: 'Deep Frying')
     roadmap << skill[8].roadmaps.create!(
-      title: "Fry to a deep golden brown", 
+      title: "How to learn to fry to a perfect golden brown", 
       description: "This is how I learned to make fried goodness",
       user_id: 4)
     roadmap << skill[8].roadmaps.create!(
@@ -221,13 +221,13 @@ category << Category.create!(name: 'Cooking')
       description: "[description of roadmap]",
       user_id: 5)
     roadmap << skill[8].roadmaps.create!(
-      title: "McDonald's has nothing on me", 
+      title: "McDonald's has nothing on me and my french fries", 
       description: "[description of roadmap]",
       user_id: 1)
   # skill << category[2].skills.create!(name: 'Stir Fry')
   # skill << category[2].skills.create!(name: 'Salad Making')
 
-category << Category.create!(name: 'Languages')
+category << Category.create!(name: 'Languages', image_url: '<i class="fa fa-comment fa-5x"></i>')
 
   skill << category[3].skills.create!(name: 'English')
     roadmap << skill[9].roadmaps.create!(
@@ -239,22 +239,22 @@ category << Category.create!(name: 'Languages')
       description: "[description of roadmap]",
       user_id: 3)
     roadmap << skill[9].roadmaps.create!(
-      title: "The King's Speech", 
+      title: "The Queen's English", 
       description: "[description of roadmap]",
       user_id: 4)
   # skill << category[3].skills.create!(name: 'Spanish')
   # skill << category[3].skills.create!(name: 'French')
   # skill << category[3].skills.create!(name: 'German')
 
-category << Category.create!(name: 'Sciences')
+category << Category.create!(name: 'Sciences', image_url: ' <i class="fa fa-flask fa-5x"></i>')
 
   skill << category[4].skills.create!(name: 'Chemistry')
      roadmap << skill[10].roadmaps.create!(
       title: "Molecules and whatnot", 
-      description: "This is how I learned to speak English",
+      description: "This is how I learned about molecules",
       user_id: 5)
     roadmap << skill[10].roadmaps.create!(
-      title: "Bonds", 
+      title: "Covalent Bonds", 
       description: "[description of roadmap]",
       user_id: 1)
     roadmap << skill[10].roadmaps.create!(
@@ -263,7 +263,7 @@ category << Category.create!(name: 'Sciences')
       user_id: 2)
   # skill << category[4].skills.create!(name: 'Biology')
 
-category << Category.create!(name: 'Math')
+category << Category.create!(name: 'Math', image_url: '<i class="fa fa-superscript fa-5x"></i>')
 
    skill << category[5].skills.create!(name: 'Algebra')
      roadmap << skill[11].roadmaps.create!(
@@ -276,12 +276,12 @@ category << Category.create!(name: 'Math')
         user_id: 4)
      roadmap << skill[11].roadmaps.create!(
         title: "Algebra master", 
-        description: "Hell on earth but I know Algebra",
+        description: "I know Algebra",
         user_id: 5)
 #   skill << category[5].skills.create!(name: 'Calculus')
 #   skill << category[5].skills.create!(name: 'Geometry')
 
-category << Category.create!(name: 'Crafts')
+category << Category.create!(name: 'Crafts', image_url:'<i class="fa fa-tint fa-5x"></i>')
   skill << category[6].skills.create!(name: 'Knitting')
      roadmap << skill[12].roadmaps.create!(
         title: "Learn how to knit", 
