@@ -9,6 +9,8 @@
 <%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
 <%= link_to "Edit Roadmap", edit_roadmap_path(@roadmap) %><br>
 <%= link_to "Delete Roadmap", roadmap_path(@roadmap), method: :delete %><br>
+Votes: <%= @roadmap.votes.size %>
+  <%= button_to "Upvote", vote_roadmap_path(@roadmap), method: :put %><br>
 <br>
 </div>
 
