@@ -4,7 +4,6 @@ module RoadmapsHelper
 		id = []
 		user_roadmaps = current_user.roadmaps
 		user_roadmaps.each {|roadmap| id << roadmap.id}
-		binding.pry
 		id.include?(roadmap.id)
 	end
 end

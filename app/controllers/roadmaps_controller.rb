@@ -66,3 +66,4 @@ class RoadmapsController < ApplicationController
     params.require(:roadmap).permit(:title, :description, :skill_id, :image, :category_id)
   end
 end
+
