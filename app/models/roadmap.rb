@@ -23,9 +23,4 @@ class Roadmap < ActiveRecord::Base
   has_many :resources
   acts_as_votable
 
-  has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/background1.jpeg"
-  # validates_attachment :image,
-  # :content_type => { :content_type => ["image/jpg", "image/gif", "image/png", "image/jpeg"] }
-  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
-
 end
