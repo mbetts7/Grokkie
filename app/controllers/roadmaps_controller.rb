@@ -1,4 +1,6 @@
 class RoadmapsController < ApplicationController
+  before_filter :authenticate_user!, only:[:new, :create, :edit, :update, :destroy, :upvote]
+  
   def new
     @roadmap = Roadmap.new()
   end
@@ -20,6 +22,22 @@ class RoadmapsController < ApplicationController
   def show
     id = params[:id]
     @roadmap = Roadmap.find(id)
+    @resources = @roadmap.resources.all
+    respond_to do |f| 
+          f.html
+          f.json {render :json}
+      end
+
+  end
+
+  def update_positions
+      params[:position].each_with_index do |resource, index|
+        resource = Resource.find(resource[:id])
+        resource.update_attribute(:position_id, index)
+      end
+      respond_to do |f| 
+          f.json {render json: {:success => "success"}}
+      end
   end
 
   def update
