@@ -5,7 +5,9 @@
   	  <%= f.input :url, as: :string %><br>
   	  <%= f.input :description, as: :text %><br>
       <!-- paperclip -->
-      <%= f.label :attachment %>
+      <%= f.label "Upload an image of your notes or whiteboard:" %>
+      <%= f.file_field :image %><br>
+      <%= f.label "Upload a file (e.g. pdf, doc, ppt, xls, txt)" %>
       <%= f.file_field :attachment %><br>
       <!-- paperclip -->
   	  <%= f.button :submit %>

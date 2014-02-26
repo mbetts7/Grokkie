@@ -8,7 +8,12 @@ Search bar (M)<br>
 <%= @resource.url %><br>
 <%= @resource.description %><br>
 <!-- paperclip -->
-<%= image_tag @resource.attachment(:square) %><br>
+<% if @resource.image.present? %>
+  <%= link_to image_tag(@resource.image.url(:square)), @resource.image.url(:original, false), target: "_blank" %>
+<% end %>
+<% if @resource.attachment.present? %>
+  <%= link_to 'Download file: "' + @resource.attachment_file_name + '"', @resource.attachment.url(:original, false), target: "_blank" %><br>
+<% end %>
 <!-- paperclip -->
 <%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %><br>
 <%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>
