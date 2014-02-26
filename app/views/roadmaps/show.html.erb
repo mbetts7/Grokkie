@@ -2,9 +2,6 @@
 <div>
 <h1><%= @roadmap.title %></h1><br>
 <h3><%= @roadmap.skill.name %> < <%=@roadmap.skill.category.name %></h3><br>
-<!-- paperclip -->
-<%= image_tag @roadmap.image(:square) %><br>
-<!-- paperclip -->
 <%= @roadmap.description %><br>
 <%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
 <%= link_to "Edit Roadmap", edit_roadmap_path(@roadmap) %><br>
