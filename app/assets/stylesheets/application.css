@@ -25,7 +25,6 @@
 }
 */
 body {
-  color: #435160;
   font-family: 'Open Sans', sans-serif;
   }
 
@@ -133,7 +132,6 @@ body {
 #user_profile_left_column #profile_img {
   height: 80px;
   width: 110px;
-  border: 1px solid black;
 }
 
 #user_profile_left_column i {
@@ -216,6 +214,7 @@ body {
 p.alert {
   color: #D00;
 }
+
 
 
 

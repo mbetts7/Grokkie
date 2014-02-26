@@ -5,7 +5,7 @@
         <div class="small-10 medium-10 large-10 columns">
         <h3>Create an account</h3>
         </div>
-        <i class="fa fa-home fa-lg"></i>
+        <%= link_to root_path do %><i class="fa fa-home fa-lg"></i><% end %>
         <i class="fa fa-cog fa-lg"></i>
       </div>
       <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
@@ -30,3 +30,11 @@
   </div>
 </div>
 
+<div class="row collapse">
+    <div class="small-3 large-2 columns">
+      <span class="prefix">http://</span>
+    </div>
+    <div class="small-9 large-10 columns">
+      <input type="text" placeholder="Enter your URL...">
+    </div>
+  </div>
