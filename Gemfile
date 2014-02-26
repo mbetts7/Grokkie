@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
 gem 'rails_12factor', :group => :production
@@ -11,22 +10,9 @@ gem 'pg'
 gem 'simple_form'
 gem 'devise'
 gem 'omniauth-linkedin'
-
-# Use sqlite3 as the database for Active Record
-
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
@@ -50,8 +36,7 @@ group :test, :development do
   gem 'dotenv-rails'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -59,8 +44,7 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 gem "paperclip", "~> 4.1"
 gem "aws-sdk", "~> 1.34.1"
+
+gem 'quiet_assets', :group => :development
