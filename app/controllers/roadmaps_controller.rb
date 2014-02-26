@@ -23,6 +23,8 @@ class RoadmapsController < ApplicationController
     id = params[:id]
     @roadmap = Roadmap.find(id)
     @resources = @roadmap.resources.all
+    id = params[:id]
+    @profile = User.find(id)
     respond_to do |f| 
           f.html
           f.json {render :json}

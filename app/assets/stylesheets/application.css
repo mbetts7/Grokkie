@@ -112,14 +112,14 @@ body {
 }
 
 
-#user_profile_left_column {
+.user_profile_left_column {
   height:200px;
   margin-right: 2px;
   padding: 10px;
   background-color: #fff;
 
 }
-#user_profile_left_column h5 {
+.user_profile_left_column h5 {
   padding: 15px 0;
   margin-top: -10px;
   width: 100%;
@@ -129,12 +129,12 @@ body {
   color: #fff;
 }
 
-#user_profile_left_column #profile_img {
+.user_profile_left_column #profile_img {
   height: 80px;
   width: 110px;
 }
 
-#user_profile_left_column i {
+.user_profile_left_column i {
   padding:0 10px;
 }
 
