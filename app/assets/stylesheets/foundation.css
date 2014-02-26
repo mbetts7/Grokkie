@@ -4255,7 +4255,7 @@ span.error, small.error {
   font-size: 0.75rem;
   font-weight: normal;
   font-style: italic;
-  background: #c60f13;
+  background: none;
   color: white; }
 
 .error input,
