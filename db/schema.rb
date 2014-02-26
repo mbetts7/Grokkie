@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20140225191140) do
     t.integer  "roadmap_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "image_url"
   end
 
   add_index "resources", ["roadmap_id"], name: "index_resources_on_roadmap_id", using: :btree
