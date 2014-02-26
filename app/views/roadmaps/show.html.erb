@@ -8,12 +8,17 @@
     </div>
     <div class="row">
       <ul class="small-4 small-centered columns breadcrumbs">
-        <li><%= link_to @roadmap.skill.name %></li> <li><%= link_to @roadmap.skill.category.name %></li>
+        <li><%= @roadmap.skill.category.name %></li><li><%=@roadmap.skill.name %></li> 
       </ul>
     </div>
     <div>
       <%= @roadmap.description %><br>
+      Votes: <%= @roadmap.votes.size %>
+      <%= button_to "Upvote", vote_roadmap_path(@roadmap), method: :put %><br>
+<br>
     </div>
+    <% if user_signed_in? %>
+       <%if check_owner(current_user, @roadmap) %>
     <div>
       <ul>
         <li><%= link_to new_roadmap_resource_path(@roadmap) do %><i class="fa fa-plus"></i>Add Resource<%end%></li>
@@ -21,6 +26,8 @@
         <li><%= link_to roadmap_path(@roadmap), method: :delete do %><i class="fa fa-trash-o"></i> Delete Roadmap <%end%></li>
       </ul>
     </div> 
+       <% end %>
+    <% end %>
     <div class="row">
       <div class="small-10 small-centered medium-6 medium-centered large-6 large-centered columns" id ="sortable">
         <% @resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
