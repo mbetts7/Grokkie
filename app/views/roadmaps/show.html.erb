@@ -1,16 +1,41 @@
-<%= link_to "Home", root_path %>
-<div>
-<h1><%= @roadmap.title %></h1><br>
-<h3><%= @roadmap.skill.name %> < <%=@roadmap.skill.category.name %></h3><br>
-<%= @roadmap.description %><br>
-<%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
-<%= link_to "Edit Roadmap", edit_roadmap_path(@roadmap) %><br>
-<%= link_to "Delete Roadmap", roadmap_path(@roadmap), method: :delete %><br>
-<br>
+<div class="roadmap_container">
+  <div class="row">
+    <%= link_to root_path do %> <i class="fa fa-home fa-lg"></i><% end %>
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <h4><%= @roadmap.title %></h4>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="small-4 small-centered columns breadcrumbs">
+        <li><%= link_to @roadmap.skill.name %></li> <li><%= link_to @roadmap.skill.category.name %></li>
+      </ul>
+    </div>
+    <div>
+      <%= @roadmap.description %><br>
+    </div>
+    <div>
+      <ul>
+        <li><%= link_to new_roadmap_resource_path(@roadmap) do %><i class="fa fa-plus"></i>Add Resource<%end%></li>
+        <li><%= link_to edit_roadmap_path(@roadmap) do %><i class="fa fa-pencil-square-o"></i>Edit Roadmap<%end%></li>
+        <li><%= link_to roadmap_path(@roadmap), method: :delete do %><i class="fa fa-trash-o"></i> Delete Roadmap <%end%></li>
+      </ul>
+    </div> 
+    <div class="row">
+      <div class="small-10 small-centered medium-6 medium-centered large-6 large-centered columns" id ="sortable">
+        <% @resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
+          <div class="small-3 medium-3 large-2 columns">
+            <%= link_to roadmap_path(@roadmap), method: :delete do %><i class="fa fa-trash-o"></i><%end%>
+            <%= link_to edit_roadmap_resource_path(@roadmap, resource.id) do %><i class="fa fa-pencil-square-o"></i><%end%>
+          </div>
+          <%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div id = "sortable" >
-<% @resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-  <%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
-  <% end %>
-</div>
+
+
+
+

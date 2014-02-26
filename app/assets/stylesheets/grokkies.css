@@ -5,12 +5,29 @@
 
 
 #header_wrapper {
-  background-color: #444;
-  height: 400px;
+  background-image: -webkit-gradient(
+  linear,
+  right top,
+  left bottom,
+  color-stop(0.01, #9BEEE8),
+  color-stop(0.49, #81C6C1)
+);
+background-image: -o-linear-gradient(left bottom, #9BEEE8 1%, #81C6C1 49%);
+background-image: -moz-linear-gradient(left bottom, #9BEEE8 1%, #81C6C1 49%);
+background-image: -webkit-linear-gradient(left bottom, #9BEEE8 1%, #81C6C1 49%);
+background-image: -ms-linear-gradient(left bottom, #9BEEE8 1%, #81C6C1 49%);
+background-image: linear-gradient(to left bottom, #9BEEE8 1%, #81C6C1 49%);
 }
 
 #logo {
   text-align: center;
+  margin-top: 10px;
+}
+
+#logo h1 {
+  font-size: 48px;
+  font-family: 'Bevan', cursive;
+  letter-spacing: 2px;
 }
 
 #navbar_actions {
@@ -30,12 +47,25 @@
 /* About us bar on tablet and web */
 
 #tagline {
-  margin-bottom:40px;
+  margin-bottom:25px;
+  margin-left: 45px;
 }
+
+#tagline h5 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+
+}
+
 
 #about_us_wrapper {
   margin-bottom: 20px; 
   color: #fff;
+}
+
+#team p {
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 50px;  
 }
 
 .about_us_column {
@@ -44,26 +74,27 @@
   text-align: center;
   border-radius: 1px; 
   margin: 0 16px;
-  background-color: #0c84cc; 
+  background-color: rgb(255, 163, 79);  
 }
 
 .about_us_column .fa {
-  padding-top: 10px;
+  padding-top: 8px;
 }
 
 .about_us_column p {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;   
   line-height: 20px;
   padding-top: 10px;
 }
 
 /* Search Bar */
 
-.search_wrapper {
+/*.search_wrapper {
   height: 60px;
   background: #b1c0cf;
   margin-bottom: 20px;
-}
+}*/
 
 /* Featured Categories */
 
@@ -105,8 +136,6 @@
 #featured_roadmap_images {
   margin-top: 5%;
   height: 40%;
-  border: 1px solid black;
-
 }
 
 /* MEDIA QUERIES FOR INDEX PAGE */
@@ -119,7 +148,6 @@
   text-align: center;
   border-radius: 1px; 
   margin: 0 10px;
-  background-color: #0c84cc; 
   }
 
   .about_us_column p {
