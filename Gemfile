@@ -12,12 +12,13 @@ gem 'devise'
 gem 'omniauth-linkedin'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-
 gem 'jquery-ui-rails'
-
 gem 'foundation-rails'
+
+group :assets do
+  gem 'coffee-rails', '~> 4.0.0'
+end
 
 gem 'font-awesome-rails'
 

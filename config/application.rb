@@ -9,7 +9,7 @@ Bundler.require(:default, Rails.env)
 module Grokkie
   class Application < Rails::Application
 
-    config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -21,7 +21,6 @@ module Grokkie
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.initialize_on_precompile = false
     
   end
 end
