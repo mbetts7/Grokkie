@@ -23,6 +23,10 @@
 #  bio                    :text
 #  learning_style         :string(255)
 #  image                  :string(255)
+#  avatar_file_name       :string(255)
+#  avatar_content_type    :string(255)
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
 #
 
 require 'spec_helper'
