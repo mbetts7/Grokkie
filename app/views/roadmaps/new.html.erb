@@ -15,8 +15,8 @@
         <%= simple_form_for (@roadmap), html: { class: 'new_roadmap_form' } do |f| %>
         	  <%= f.input :title, as: :string, :placeholder=> "Name your Roadmap" %>
         	  <%= f.input :description, as: :text, :placeholder=> "Description" %>
-            <%= f.collection_select :category_id, Category.order(:name), :id, :name%>
-            <%= f.grouped_collection_select :skill_id, Category.order(:name), :skills, :name, :id, :name%>
+            <%= f.collection_select :category_id, Category.order(:name), :id, :name, :prompt => 'Choose a cateogry' %>
+            <%= f.grouped_collection_select :skill_id, Category.order(:name), :skills, :name, :id, :name, :prompt => 'Choose a skill'%>
             <div id="mobile_bar"></div>
         	  <%= f.button :submit, value: "Create" %>
          <% end %>
