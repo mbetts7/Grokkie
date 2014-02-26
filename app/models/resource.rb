@@ -23,11 +23,21 @@
 class Resource < ActiveRecord::Base
   belongs_to :roadmap
 
-
 # Adding an document to resource
     has_attached_file :attachment
-
-    validates_attachment_content_type :attachment, content_type: "application/pdf"
+    #MIME types http://msdn.microsoft.com/en-us/library/ms775147(v=vs.85).aspx
+    validates_attachment_content_type :attachment, content_type: [
+      'application/pdf', 
+      'text/plain', 
+      'text/html', 
+      'text/xml', 
+      'text/richtext', 
+      'application/msword', 
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 
+      'application/vnd.ms-excel', 
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 
+      'application/vnd.ms-powerpoint', 
+      'application/vnd.openxmlformats-officedocument.presentationml.presentation']
       
 # Adding an image to resource
     has_attached_file :image, styles: { 
@@ -36,7 +46,7 @@ class Resource < ActiveRecord::Base
       medium: '300x300>', 
       }
     
-    validates_attachment_content_type :image, :content_type => /\Aimage/, :message => 'file type not allowed, please only upload images'
+    validates_attachment_content_type :image, content_type: /\Aimage/, message: 'file type not allowed, please only upload images'
   
     #uncomment if you want default_url
     # default_url: 'login_background.jpg'
