@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
-  has_many :roadmaps
+  has_many :roadmaps, dependent: :destroy
 
   validates_presence_of :username
   validates_uniqueness_of :username
