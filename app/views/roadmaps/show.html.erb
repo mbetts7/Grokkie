@@ -3,9 +3,11 @@
 <h1><%= @roadmap.title %></h1><br>
 <h3><%= @roadmap.skill.name %> < <%=@roadmap.skill.category.name %></h3><br>
 <%= @roadmap.description %><br>
+<%if check_owner(current_user, @roadmap) %>
 <%= link_to "Add Resource", new_roadmap_resource_path(@roadmap) %><br>
 <%= link_to "Edit Roadmap", edit_roadmap_path(@roadmap) %><br>
 <%= link_to "Delete Roadmap", roadmap_path(@roadmap), method: :delete %><br>
+<% end %>
 <br>
 </div>
 
