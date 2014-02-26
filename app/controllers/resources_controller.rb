@@ -1,5 +1,7 @@
 class ResourcesController < ApplicationController
   def new
+    roadmap = Roadmap.find(params[:roadmap_id])
+    @new_position = roadmap.resources.length + 1
     @resource = Resource.new()
   end
 
@@ -28,11 +30,15 @@ class ResourcesController < ApplicationController
   end
 
   def destroy
+    roadmap = Roadmap.find(params[:roadmap_id])
+    roadmap.resources.find(params[:id]).destroy
+    redirect_to roadmap_path(roadmap)
+
   end
 
   private
 
   def resource_params
-    params.require(:resource).permit(:name, :url, :description, :attachment)
+    params.require(:resource).permit(:name, :url, :description, :attachment, :position_id)
   end
 end

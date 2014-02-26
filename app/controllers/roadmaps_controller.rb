@@ -4,7 +4,7 @@ class RoadmapsController < ApplicationController
   end
 
   def create
-    new_roadmap = Roadmap.new(roadmap_params)
+    new_roadmap = current_user.roadmaps.build(roadmap_params)
     if new_roadmap.save
        redirect_to roadmap_path(new_roadmap)
     else
@@ -45,6 +45,6 @@ class RoadmapsController < ApplicationController
   private 
 
   def roadmap_params
-    params.require(:roadmap).permit(:title, :description, :skill_id, :image)
+    params.require(:roadmap).permit(:title, :description, :skill_id, :image, :category_id)
   end
 end
