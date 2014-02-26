@@ -1,8 +1,15 @@
-<%= simple_form_for :profile, method: :patch, url: profile_path do |f| %>
-	  <%= f.input :username, as: :string, placeholder: "Username" %><br>
-	  <%= f.input :twitter_name, as: :string, placeholder: "Twitter Name" %><br>
-	  <%= f.input :github_name, as: :string, placeholder: "Github Name" %><br>
-    <%= f.input :learning_style, collection: @learning_style, placeholder: "Learning Style" %><br>
-	  <%= f.input :bio, as: :text, placeholder: "Bio" %><br>
-	  <%= f.button :submit %>
- <% end %>
+<h1> Edit your profile </h1>
+  <%= simple_form_for :profile, method: :patch, url: profile_path do |f| %>
+  	  <%= f.label "Username:" %>
+      <%= f.input_field :username, as: :string, placeholder: "Username" %><br>
+  	  <%= f.label "Twitter handle (optional):" %>
+      <%= f.input :twitter_name, as: :string, placeholder: "Twitter Name" %><br>
+      <%= f.label "Github handle (optional):" %>
+  	  <%= f.input :github_name, as: :string, placeholder: "Github Name" %><br>
+      <%= f.label "Learning styles: describe learning styles here... (optional)" %>
+      <%= f.input :learning_style, collection: @learning_style, placeholder: "Learning Style" %><br>
+  	  <%= f.label "Enter quick bio here: (optional)" %>
+      <%= f.input :bio, as: :text, placeholder: "Bio" %><br>
+      <%= f.hint "* required field" %>
+      <%= f.button :submit %>
+   <% end %>
