@@ -35,7 +35,7 @@
             <%= link_to roadmap_path(@roadmap), method: :delete do %><i class="fa fa-trash-o"></i><%end%>
             <%= link_to edit_roadmap_resource_path(@roadmap, resource.id) do %><i class="fa fa-pencil-square-o"></i><%end%>
           </div>
-          <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
+          <%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
         <% end %>
       </div>
     </div>
