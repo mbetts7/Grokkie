@@ -19,6 +19,6 @@ class ProfilesController < ApplicationController
 
 	private
 	def profile_params
-		params.require(:profile).permit(:twitter_name, :github_name, :bio, :username, :learning_style)
+		params.require(:profile).permit(:twitter_name, :github_name, :bio, :username, :learning_style, :avatar)
 	end
 end
