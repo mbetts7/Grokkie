@@ -10,8 +10,10 @@
 <% end %>
 <!-- paperclip -->
 <br>
-<% if check_owner(current_user, @roadmap) %>
-<%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %><br>
-<%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>
-<%= link_to "Return to Roadmap", roadmap_path(@roadmap) %><br>
+<% if user_signed_in? %>
+	<% if check_owner(current_user, @roadmap) %>
+	<%= link_to "Edit", edit_roadmap_resource_path(@roadmap, @resource) %><br>
+	<%= link_to "Delete", roadmap_resource_path(@roadmap, @resource), method: :delete %><br>
+	<%= link_to "Return to Roadmap", roadmap_path(@roadmap) %><br>
+	<% end %>
 <% end %>
