@@ -20,6 +20,9 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
   </head>
+    <% if signed_in? %>
+    <%= render 'layouts/header' %>
+    <% end %>
 
   <body>
     <%= yield %>
