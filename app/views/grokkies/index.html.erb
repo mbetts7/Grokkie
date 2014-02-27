@@ -1,34 +1,33 @@
-<div class="hide-for-small" id="header_wrapper">
-  <div class="row">
-    <div class="medium-4 large-4 columns" id="logo">
-      <h1> Grokkie </h1>
-    </div>
-    <div class="medium-6 large-4 columns" id="navbar_actions">
-      <ul>
-        <% if user_signed_in? %>
-        <li><%= link_to current_user.username, profile_path(current_user) %></li>
-        <li><%= button_to "Sign Out", destroy_user_session_path, :method => :delete %>
-          <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path%></li>
-        <% end %>
-      </ul>
-    </div>
+<% if !user_signed_in? %>
+  <div class="hide-for-small" id="header_wrapper">
+    <div class="row">
+      <div class="medium-4 large-4 columns" id="logo">
+        <h1> Grokkie </h1>
+      </div>
+      <div class="medium-6 large-4 columns" id="navbar_actions">
+        <ul>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path%></li>
+        </ul>
+      </div>
 
+    </div>
+    <div class="row">  
+      <div class="medium-4 large-12 columns" id="tagline"><h5>JUST LEARN IT</h5></div>
+    </div>  
+    <div class="row" id="about_us_wrapper">  
+        <div class="medium-4 large-4 columns about_us_column"><i class="fa fa-archive fa-5x"></i><br><p>Collect resources while learning a new skill<p></div>
+        <div class="medium-4 large-4 columns about_us_column"><i class="fa fa-sitemap fa-5x"></i><br><p>Post those resources as a roadmap on Grokkie<p></div>
+        <div class="medium-4 large-4 columns about_us_column end"><i class="fa fa-globe fa-5x"></i><br><p>Share and view roadmaps to unlock life's secrets<p></div>
+    </div>
+    <div class="row">
+      <div class="medium-5 large-4 columns" id="team"><p>Find out more about our team</p></div>
+      <div class="medium-4 large-2 columns"><%= link_to "Create a Roadmap", new_roadmap_path %></div>
+    </div>    
   </div>
-  <div class="row">  
-    <div class="medium-4 large-12 columns" id="tagline"><h5>JUST LEARN IT</h5></div>
-  </div>  
-  <div class="row" id="about_us_wrapper">  
-      <div class="medium-4 large-4 columns about_us_column"><i class="fa fa-archive fa-5x"></i><br><p>Collect resources while learning a new skill<p></div>
-      <div class="medium-4 large-4 columns about_us_column"><i class="fa fa-sitemap fa-5x"></i><br><p>Post those resources as a roadmap on Grokkie<p></div>
-      <div class="medium-4 large-4 columns about_us_column end"><i class="fa fa-globe fa-5x"></i><br><p>Share and view roadmaps to unlock life's secrets<p></div>
-  </div>
-  <div class="row">
-    <div class="medium-5 large-4 columns" id="team"><p>Find out more about our team</p></div>
-    <div class="medium-4 large-2 columns"><%= link_to "Create a Roadmap", new_roadmap_path %></div>
-  </div>    
-</div>
+  <% else %>
+ <%= render 'layouts/header' %>
+<% end %>
 
 <div class="row">
   <div class="hide-for-small medium-4 large-4 columns">
@@ -36,18 +35,15 @@
   </div>
 
 <!-- Need to fix this dropdown bar for each category and sub-skill -->
-<div class="small-12 medium-8 large-8 columns" id="featured_categories">
-      <% n = 0 %>
+  <div class="small-12 medium-8 large-8 columns" id="featured_categories">
       <% @categories.each do |category| %>
-      <% n += 1 %>
-          <a href="#" data-dropdown="drop<%= category.id %>"><li><%= category.name %></li></a>
-    
-      <ul id="drop<%= category.id %>" class="f-dropdown" data-dropdown-content> 
+       <a href="#" data-dropdown="drop<%= category.id %>"><li><%= category.name %></li></a>
+       <ul id="drop<%= category.id %>" class="f-dropdown" data-dropdown-content> 
           <%category.skills.each do |skill| %>
           <li><%=link_to skill.name, category_skill_path(category, skill)%></li>
-        <% end %>
-      </ul>
-    <% end %>
+          <% end %>
+       </ul>
+      <% end %>
   </div>
 </div>
 
@@ -65,7 +61,7 @@
       <td class="small-10 medium-5 large-3 columns">
         <div class="row">
           <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <a href=""><p>Created by:<%=@users.find(r.user_id).username %><p></a> 
+            <a href=""><p>Created by:<%= link_to r.user.username, profile_path(r.user) %><p></a> 
           </div>
           <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
             <!-- Fix the votes!!! -->

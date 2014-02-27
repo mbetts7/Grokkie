@@ -14,7 +14,6 @@
           <%= f.input :password, :required => false, :placeholder => "password" %>
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-            <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %> 
             </div>
             <div class="small-8 medium-8 large-8 columns" id="submit_button">
               <i class="fa fa-power-off fa-lg"></i><%= f.button :submit, "Sign in" %>

@@ -21,10 +21,9 @@ class RoadmapsController < ApplicationController
 
   def show
     id = params[:id]
-    user_id = current_user.id
     @roadmap = Roadmap.find(id)
     @resources = @roadmap.resources.all
-    @profile = User.find(user_id)
+    @profile = @roadmap.user
     respond_to do |f| 
           f.html
           f.json {render :json}

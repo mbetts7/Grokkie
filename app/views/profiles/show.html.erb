@@ -6,27 +6,43 @@
         <h5>PROFILE</h5>
           <div class="small-6 medium-6 large-6 columns" class="profile_img">
             <% if @profile.image.present? %>
-              <% image_tag(@profile.image) %>
+              <%= image_tag(@profile.image) %>
             <% else %>
               <%= image_tag(@profile.avatar.url(:thumb)) %>
             <% end %>
           </div>
         <ul class="small-6 medium-6 large-4 columns">
           <li><i class="fa fa-user"></i><%= @profile.username %></li>
+          <% if @profile.twitter_name.present? %>
           <li><i class="fa fa-twitter"></i><span><%= @profile.twitter_name %></li>
+          <% else %>
+          <li><i class="fa fa-twitter"></i><span><i>no entry</i></li>
+          <% end %>
+          <% if @profile.github_name.present? %>
           <li><i class="fa fa-github"></i><%= @profile.github_name %></li>
+          <% else %>
+          <li><i class="fa fa-github"></i><i>no entry</i></li>
+          <% end %>
         </ul>
         <div class="small-12 medium-12 large-12 columns">
           <% if current_user == @profile %>
-          <%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %>
-          <%= link_to edit_user_registration_path do %><i class="fa fa-lock">Account Settings</i><% end %>
+            <%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %>
+            <%= link_to edit_user_registration_path do %><i class="fa fa-lock">Account Settings</i><% end %>
           <% end %>
         </div>
       </div>
       <div class="small-12 medium-5 large-6 columns end" id="user_profile_right_column">
       <h5>BIO</h5> 
+      <% if @profile.learning_style.present? %>
         <div>Learning Style: <%= @profile.learning_style %></div><br/>
+        <% else %>
+        <div>Learning Style: <i>no entry</i></div><br/>
+      <% end %>
+      <% if @profile.bio.present? %>
         <div>Bio: <%= @profile.bio %></div>
+      <% else %>
+        <div>Bio: <i>no entry</i></div>
+      <% end %>
       </div>
     </div>
 
