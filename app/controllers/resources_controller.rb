@@ -10,7 +10,7 @@ class ResourcesController < ApplicationController
   def create
     roadmap = Roadmap.find(params[:roadmap_id])
     new_resource = roadmap.resources.create(resource_params)
-    redirect_to roadmap_resource_path(roadmap, new_resource)
+    redirect_to roadmap_path(roadmap)
   end
 
   def edit
