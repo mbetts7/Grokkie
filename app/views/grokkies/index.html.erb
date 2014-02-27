@@ -33,18 +33,15 @@
   </div>
 
 <!-- Need to fix this dropdown bar for each category and sub-skill -->
-<div class="small-12 medium-8 large-8 columns" id="featured_categories">
-      <% n = 0 %>
+  <div class="small-12 medium-8 large-8 columns" id="featured_categories">
       <% @categories.each do |category| %>
-      <% n += 1 %>
-          <a href="#" data-dropdown="drop<%= category.id %>"><li><%= category.name %></li></a>
-    
-      <ul id="drop<%= category.id %>" class="f-dropdown" data-dropdown-content> 
+       <a href="#" data-dropdown="drop<%= category.id %>"><li><%= category.name %></li></a>
+       <ul id="drop<%= category.id %>" class="f-dropdown" data-dropdown-content> 
           <%category.skills.each do |skill| %>
           <li><%=link_to skill.name, category_skill_path(category, skill)%></li>
-        <% end %>
-      </ul>
-    <% end %>
+          <% end %>
+       </ul>
+      <% end %>
   </div>
 </div>
 
@@ -62,7 +59,7 @@
       <td class="small-10 medium-5 large-3 columns">
         <div class="row">
           <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <a href=""><p>Created by:<%=@users.find(r.user_id).username %><p></a> 
+            <a href=""><p>Created by:<%= link_to r.user.username, profile_path(r.user) %><p></a> 
           </div>
           <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
             <!-- Fix the votes!!! -->
