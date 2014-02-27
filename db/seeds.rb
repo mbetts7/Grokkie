@@ -4,7 +4,7 @@ skill = []
 roadmap = []
 resources = []
 
-users << User.create(username: 'mbetts7', email: 'mbetts7@gmail.com', password: 'password', password_confirmation: 'password')
+users << User.create(username: 'mike7', email: 'mike@gmail.com', password: 'password', password_confirmation: 'password')
 users << User.create(username: 'Finn789', email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password')
 users << User.create(username: 'Ashton87', email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password')
 users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')

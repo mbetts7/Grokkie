@@ -19,10 +19,10 @@
 #
 
 class Roadmap < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
   belongs_to :skill
   belongs_to :category
-  has_many :resources
+  has_many :resources, dependent: :destroy
   acts_as_votable
 
 end

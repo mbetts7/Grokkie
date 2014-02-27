@@ -1,4 +1,6 @@
 class ResourcesController < ApplicationController
+    before_filter :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
+
   def new
     roadmap = Roadmap.find(params[:roadmap_id])
     @new_position = roadmap.resources.length + 1

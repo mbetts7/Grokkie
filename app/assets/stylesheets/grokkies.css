@@ -75,6 +75,7 @@ background-image: linear-gradient(to left bottom, #9BEEE8 1%, #81C6C1 49%);
   border-radius: 1px; 
   margin: 0 16px;
   background-color: rgb(255, 163, 79);  
+  border-radius: 25px;
 }
 
 .about_us_column .fa {
@@ -119,10 +120,10 @@ background-image: linear-gradient(to left bottom, #9BEEE8 1%, #81C6C1 49%);
 
 .featured_roadmaps td {
   height:300px;
-  border: 1px solid black;
   text-align: center;
   margin: 20px 40px;
   background-color: #fff;
+  
 }
 
 .featured_roadmaps td:last-child {
