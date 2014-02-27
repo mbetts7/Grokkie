@@ -1,5 +1,4 @@
-require 'bitly'
-
+# require 'bitly'
 class ResourcesController < ApplicationController
     before_filter :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
 
@@ -43,7 +42,7 @@ class ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:name, :url, :description, :attachment, :image, :position_id)
+    params.require(:resource).permit(:name, :url, :description, :attachment, :image, :position_id, :short_url)
   end
   
 end
