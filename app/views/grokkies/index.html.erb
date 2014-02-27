@@ -29,9 +29,7 @@
  <%= render 'layouts/header' %>
 <% end %>
 
-<div class="">
-
-<!-- Need to fix this dropdown bar for each category and sub-skill -->
+<div id="featured_categories_container">
   <div class="small-12 medium-12 large-12 columns" id="featured_categories">
       <% @categories.each do |category| %>
        <a href="#" data-dropdown="drop<%= category.id %>"><li><%= sanitize category.image_url %><%= category.name %></li></a>
@@ -57,8 +55,8 @@
       <% @random_roadmaps.each do |r|%>
       <td class="small-10 medium-5 large-3 columns end">
         <div class="row">
-          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
-            <p>Created by:<%= link_to r.user.username, profile_path(r.user) %><p></a> 
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_user">
+            <a href=""><p><%= link_to r.user.username, profile_path(r.user) %><p></a> 
           </div>
           <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_votes">
             <!-- Fix the votes!!! -->
@@ -67,7 +65,7 @@
         </div>
         <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
           <%= link_to (r) do %>
-            <a><%=r.title%></a>
+            <p><%=r.title%></p>
           <% end %>
         </div>
         
