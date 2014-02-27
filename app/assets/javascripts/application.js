@@ -37,9 +37,3 @@ $(function(){
 	});
 });
 
- // $(function() {
- //    $(".fa-pencil-square-o").click(function() {
- //      $("#hello").reveal();
- //    });
- //  });
-

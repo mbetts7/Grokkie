@@ -1,6 +1,6 @@
 /* USER PROFILE SHOW PAGE */
 
-.profile_page_container {
+.page_container {
   background-color: #ecf0f1;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -9,16 +9,16 @@
   overflow-y: inherit; 
 }
 
-#profile_form {
-  margin-top: 7%;
-  margin-left: 6%;
+.page_form {
+  margin-top: 8%;
+  /*margin-left: 6%;*/
 }
 
-#profile_form ul {
+.page_form ul {
   list-style-type: none;
 }
 
-#profile_form ul li {
+.page_form ul li {
   text-decoration: none;
   font-size: 15px;
 }

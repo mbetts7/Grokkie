@@ -22,7 +22,7 @@ class ResourcesController < ApplicationController
     roadmap = Roadmap.find(params[:roadmap_id])
     resource = roadmap.resources.find(params[:id])
     resource.update(resource_params)
-    redirect_to roadmap_resource_path(roadmap, resource)
+    redirect_to roadmap_path(roadmap)
 
   end
 

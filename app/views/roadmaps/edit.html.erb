@@ -1,14 +1,29 @@
-<%= link_to "Home", root_path %>
-<%= simple_form_for (@roadmap) do |f| %>
+
+<div class="medium-8 medium-centered large-5 large-centered columns">
+  <div class="new_roadmap_wrapper">
+    <div class="row hide-for-small header" id="home_link">
+        <div class="medium-6 large-6 columns">
+        <%= link_to root_path do %> <i class="fa fa-home fa-lg"></i><% end %>
+        </div>
+    </div>
+    <div class="small-10 small-centered medium-8 medium-centered large-9 large-centered columns">
+      <%= simple_form_for (@roadmap) do |f| %>
+      <label>Skill:</label>
       <%= f.association :skill %>
-	  <%= f.input :title, as: :string %><br>
-	  <%= f.input :description, as: :text %><br>
-	  <%= f.button :submit %>
- <% end %>
-
-
-<div id = "sortable">
-<% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-  <%=resource.name%><br><%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
-<% end %>
+      <label>Roadmap Title:</label>
+      <%= f.input :title, as: :string %><br>
+      <label>Roadmap Description:</label>
+      <%= f.input :description, as: :text %><br>
+      <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>  
+  <div id = "sortable">
+  <% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
+    <%=resource.name%><br><%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
+  <% end %>
+  </div>
 </div>
+
+
+
