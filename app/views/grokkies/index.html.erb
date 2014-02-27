@@ -25,6 +25,8 @@
       <div class="medium-4 large-2 columns"><%= link_to "Create a Roadmap", new_roadmap_path %></div>
     </div>    
   </div>
+  <% else %>
+ <%= render 'layouts/header' %>
 <% end %>
 
 <div class="row">
