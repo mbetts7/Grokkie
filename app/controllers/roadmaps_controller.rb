@@ -54,7 +54,6 @@ class RoadmapsController < ApplicationController
 
   def destroy
     id = params[:id]
-    binding.pry
     Roadmap.find(id).destroy
     redirect_to profile_path(current_user)
   end
