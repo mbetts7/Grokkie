@@ -8,7 +8,8 @@
 }
 
 .header {
-  background-color: #81C6C1;
+  background-color: #E4DBBF;
+  /*background-color: #81C6C1;*/
   padding-bottom: 10px;
 }
 
@@ -96,23 +97,17 @@
 }
 
 
-#sortable p {
+.resources p {
   margin: 20px 0;
   padding: 15px;
   border: 1px solid gray;
   border-radius: 10px; 
 }
 
-#sortable {
+#resources {
  
 }
 
-.resource {
-
-}
-.resource p {
-  padding: 20px 0;
-}
 
 .resource i {
   padding: 40px 0;
@@ -147,7 +142,6 @@
   text-decoration: none;
   font-size: 15px;
 }
-
 
 /* MEDIA QUERIES */
 @media (min-width: 900px) {

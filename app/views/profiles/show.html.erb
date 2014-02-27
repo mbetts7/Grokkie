@@ -1,8 +1,10 @@
-<div class="profile_page_container">
-<%= link_to "Home", root_path %>
-  <div id="profile_form">
+<div class="page_container">
+  <% if user_signed_in? %>
+    <%= render 'layouts/header' %>
+  <% end %>
+  <div class="page_form">
     <div class="row">
-      <div class="small-12 medium-5 large-5 columns user_profile_left_column">
+      <div class="small-12 medium-5 large-6 columns user_profile_left_column">
         <h5>PROFILE</h5>
           <div class="small-6 medium-6 large-6 columns" class="profile_img">
             <% if @profile.image.present? %>
@@ -49,11 +51,50 @@
     <div class="row"> 
       <div class="small-12 medium-11 large-12 columns" id="user_profile_body">
         <h5>USER ROADMAPS</h5> 
-        <%= link_to "Create Roadmap", new_roadmap_path %><br>
-          <% @profile.roadmaps.each do |roadmap| %>
-           <%= link_to roadmap.title, roadmap_path(roadmap) %><br>
-        <% end %>
+         <div class="row">
+          <table class="featured_roadmaps">
+            <tr>
+              <% @profile.roadmaps.each do |r| %>
+              <td class="small-10 medium-5 large-3 columns end">
+                <div class="row">
+                  <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_votes">
+                    <!-- Fix the votes!!! -->
+                    <p><i class="fa fa-thumbs-o-up"></i> <%= r.votes.count%><p> 
+                  </div>
+                </div>
+                <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+                  <%= link_to (r) do %>
+                    <h5><%=r.title%></h5>
+                  <% end %>
+                </div>
+                
+                <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+                  <%= sanitize r.skill.category.image_url %>
+                </div>
+                <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_skill">
+                  <a href=""><p><%=r.skill.name%><p></a>
+                </div>
+              </td>
+              <% end %>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

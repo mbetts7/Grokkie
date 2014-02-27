@@ -27,11 +27,12 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find(id)
     @resources = @roadmap.resources.all
     @profile = @roadmap.user
+    roadmaps = Roadmap.all
+    @random_roadmaps = roadmaps.sample(6)
     respond_to do |f| 
           f.html
           f.json {render :json}
       end
-
   end
 
   def update_positions
