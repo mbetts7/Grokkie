@@ -30,6 +30,13 @@ class ResourcesController < ApplicationController
     roadmap = Roadmap.find(params[:roadmap_id])
     resource = roadmap.resources.find(params[:id])
     resource.update(resource_params)
+
+    client = Bitly.client
+    bitly_url = client.shorten(resource.url)
+    # short_url is a method for bitly gem
+    resource.short_url = bitly_url.short_url
+    resource.save
+
     redirect_to roadmap_resource_path(roadmap, resource)
 
   end
