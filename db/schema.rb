@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 20140227055729) do
     t.integer  "roadmap_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "image_url"
     t.string   "attachment_file_name"
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"

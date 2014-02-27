@@ -23,9 +23,10 @@
             <h5>Edit</h5>
               <div class="small-12 medium-12 large-12 columns" class="profile_img">
                 <%= simple_form_for (@roadmap) do |f| %>
-                <%= f.association :skill, :prompt => "Choose a skill" %>
                 <%= f.input :title, as: :string, :placeholder => "title" %><br>
                 <%= f.input :description, as: :text, :placeholder => "Roadmap Description" %><br>
+                <%= f.collection_select :category_id, Category.order(:name), :id, :name, :prompt => 'Choose a cateogry' %>
+              <%= f.grouped_collection_select :skill_id, Category.order(:name), :skills, :name, :id, :name, :prompt => 'Choose a skill'%>
                 <%= f.button :submit %>
                 <% end %>
               </div>

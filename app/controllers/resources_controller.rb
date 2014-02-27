@@ -1,4 +1,3 @@
-# require 'bitly'
 class ResourcesController < ApplicationController
     before_filter :authenticate_user!, only:[:new, :create, :edit, :update, :destroy]
 
@@ -17,8 +16,7 @@ class ResourcesController < ApplicationController
     # short_url is a method for bitly gem
     new_resource.short_url = bitly_url.short_url
     new_resource.save
-    
-    redirect_to roadmap_resource_path(roadmap, new_resource)
+    redirect_to roadmap_path(roadmap)
   end
 
   def edit
