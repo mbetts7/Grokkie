@@ -1,6 +1,8 @@
 class RoadmapsController < ApplicationController
   before_filter :authenticate_user!, only:[:new, :create, :edit, :update, :destroy, :upvote]
   
+
+
   def new
     @roadmap = Roadmap.new()
   end
@@ -32,7 +34,7 @@ class RoadmapsController < ApplicationController
     respond_to do |f| 
           f.html
           f.json {render :json}
-      end
+    end
   end
 
   def update_positions
@@ -70,5 +72,7 @@ class RoadmapsController < ApplicationController
   def roadmap_params
     params.require(:roadmap).permit(:title, :description, :skill_id, :image, :category_id)
   end
+
+  
 end
 
