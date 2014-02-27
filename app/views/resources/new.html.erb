@@ -13,6 +13,7 @@
       </div>
 
         <div class="small-10 small-centered medium-8 medium-centered large-9 large-centered columns">
+          <p class='notice'><%=h flash[:notice] %></p>
             <%= simple_form_for @resource, method: :post, url: roadmap_resources_path do |f| %>
             <%= f.input :position_id, as: :hidden, :input_html => { :value => @new_position } %>
               <%= f.input :name, as: :string, placeholder: "Resource Name" %><br>

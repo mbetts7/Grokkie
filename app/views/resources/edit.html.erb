@@ -10,6 +10,7 @@
   </div>
 
     <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
+      <p class='notice'><%=h flash[:notice] %></p>
       <%= simple_form_for [@roadmap, @resource] do |f| %>
         <label>Resource Name:</label>
         <%= f.input :name, as: :string %>
