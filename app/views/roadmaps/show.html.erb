@@ -57,6 +57,14 @@
       </div>
       </div>
     </div>
+    <div>
+      Votes: <%= @roadmap.votes.size %>
+      <%= button_to "Upvote", vote_roadmap_path(@roadmap), method: :put %>
+    </div>
+    <% if user_signed_in? %>
+       <%if check_owner(current_user, @roadmap) %>
+       <% end %>
+    <% end %>
     <div class="row">
       <div class="featured_content">
       </div>

@@ -23,6 +23,10 @@
 #  bio                    :text
 #  learning_style         :string(255)
 #  image                  :string(255)
+#  avatar_file_name       :string(255)
+#  avatar_content_type    :string(255)
+#  avatar_file_size       :integer
+#  avatar_updated_at      :datetime
 #
 
 class User < ActiveRecord::Base
@@ -30,10 +34,20 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
-  has_many :roadmaps
+  has_many :roadmaps, dependent: :destroy
 
   validates_presence_of :username
   validates_uniqueness_of :username
+
+  # paperclip #
+  has_attached_file :avatar, styles: { 
+      thumb: '100x100>',
+      square: '200x200#',
+      medium: '300x300>', 
+      }, default_url: 'default_avatar.gif'
+    
+  validates_attachment_content_type :avatar, content_type: /\Aimage/, message: 'file type not allowed, please only upload images'
+  # paperclip #
 
   def self.from_omniauth(auth)
   	where(auth.slice(:provider, :uid, :image)).first_or_create do |user|
