@@ -57,8 +57,8 @@
       <% @random_roadmaps.each do |r|%>
       <td class="small-10 medium-5 large-3 columns end">
         <div class="row">
-          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_user">
-            <a href=""><p><%= link_to r.user.username, profile_path(r.user) %><p></a> 
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_title">
+            <p>Created by:<%= link_to r.user.username, profile_path(r.user) %><p></a> 
           </div>
           <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_votes">
             <!-- Fix the votes!!! -->
