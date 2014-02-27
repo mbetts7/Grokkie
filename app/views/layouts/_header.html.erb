@@ -1,15 +1,22 @@
- <header>
+<header>
   <div class="small-12 medium-12 large-12 columns header">
     <nav class="header_wrapper">
-      <div class="small-4 medium-5 large-6 columns header_logo">
-        <h1>GROKKIE</h1>
+      <div class="small-2 medium-3 large-4 columns" id="logo">
+        <%= link_to root_path do%><h1>GROKKIE</h1><% end %>
       </div>
-      <div class="small-8 medium-4 large-4 columns">
-        <ul>
-          <li><%= link_to current_user.username, profile_path(current_user) %></li>
-          <li><%= button_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-        </ul>
+      <div class="small-8 medium-4 large-4 columns nav_bar">
+          <a href="#" data-dropdown="drop"><li><%= current_user.username %></li></a>
+            <ul id="drop" class="f-dropdown" data-dropdown-content>
+              <li><%= link_to "My Profile", profile_path(current_user) %></li>
+              <li><%= link_to "Create a Roadmap", new_roadmap_path %></li>
+              <li><%= button_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+            </ul>
       </div>
     </nav>
   </div>
 </header>
+
+
+
+
+

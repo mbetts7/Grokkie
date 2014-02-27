@@ -1,14 +1,44 @@
-<%= link_to "Home", root_path %>
-<%= simple_form_for (@roadmap) do |f| %>
-      <%= f.association :skill %>
-	  <%= f.input :title, as: :string %><br>
-	  <%= f.input :description, as: :text %><br>
-	  <%= f.button :submit %>
- <% end %>
-
-
-<div id = "sortable">
-<% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-  <%=resource.name%><br><%= content_tag(:p, resource.description, 'data-id' => resource.id) %>
-<% end %>
+<div class="page_container">
+  <% if user_signed_in? %>
+    <%= render 'layouts/header' %>
+  <% end %>
+  <div class="row">
+    <div class="small-12 medium-7 large-7 columns">
+      <div class="roadmap_container">
+          <h1>Reorder your roadmap</h1>
+          <div id="sortable">
+            <% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
+              <div class="small-9 medium-8 large-10 columns end">
+                <div class="resource">
+                  <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+      </div>
+    </div>
+      <div class="small-12 medium-5 large-5 columns">
+        <div class="row">
+          <div class="user_profile_left_column" id="roadmap_user_profile">
+            <h5>Edit</h5>
+              <div class="small-12 medium-12 large-12 columns" class="profile_img">
+                <%= simple_form_for (@roadmap) do |f| %>
+                <%= f.association :skill, :prompt => "Choose a skill" %>
+                <%= f.input :title, as: :string, :placeholder => "title" %><br>
+                <%= f.input :description, as: :text, :placeholder => "Roadmap Description" %><br>
+                <%= f.button :submit %>
+                <% end %>
+              </div>
+          </div>
+        </div>
+      </div>  
+  </div>
 </div>
+
+
+
+
+
+
+
+

@@ -1,15 +1,36 @@
-<div data-reveal-id="myModal">
-  <%= link_to "Home", root_path %>
-  <%= simple_form_for [@roadmap, @resource] do |f| %>
-  	  <%= f.input :name, as: :string %><br>
-  	  <%= f.input :url, as: :string %><br>
-  	  <%= f.input :description, as: :text %><br>
-      <!-- paperclip -->
-      <%= f.label "Upload an image of your notes or whiteboard:" %>
-      <%= f.file_field :image %><br>
-      <%= f.label "Upload a file (e.g. pdf, doc, ppt, xls, txt)" %>
-      <%= f.file_field :attachment %><br>
-      <!-- paperclip -->
-  	  <%= f.button :submit %>
-  <% end %>
+<div id="myModal" class="reveal-modal" data-reveal>
+
+<div class="medium-8 medium-centered large-5 large-centered columns">
+  <div class="new_roadmap_wrapper">
+
+  <div class="row hide-for-small header" id="home_link">
+      <div class="medium-6 large-6 columns">
+        <%= link_to root_path do %> <i class="fa fa-home fa-lg"></i><% end %>
+      </div>
+  </div>
+
+    <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
+      <%= simple_form_for [@roadmap, @resource] do |f| %>
+        <label>Resource Name:</label>
+        <%= f.input :name, as: :string %>
+        <label>Resource Url:</label>
+        <%= f.input :url, as: :string %>
+        <label>Resource description:</label>
+        <%= f.input :description, as: :text %>
+        <!-- paperclip -->
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
+        <%= f.label "Upload an image:" %>
+        <%= f.file_field :image %>
+        </div>
+        <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered   columns">
+        <%= f.label "Upload a file (e.g. pdf, doc, ppt, xls, txt)" %>
+        <%= f.file_field :attachment %>
+        </div>
+        <!-- paperclip -->
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<a class="close-reveal-modal">&#215;</a>
 </div>
