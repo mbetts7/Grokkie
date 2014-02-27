@@ -1,12 +1,12 @@
 /* All Pages common layout */
 
 
+
+
+
+
 /* INDEX PAGE */
 
-/*#E4DBBF*/
-/*#DC5B21
-#70AB8F
-#383127*/
 #header_wrapper {
   background-color: #E4DBBF;
   position: relative;
@@ -80,10 +80,6 @@
   border-radius: 1px; 
   margin: 0 26px;
   background-color:#70AB8F;
-  /*background-color: #D96459;*/
-  /*background-color: #F2AE72;*/
-  /*background-color: #35404f;*/
-  /*background-color: rgb(255, 163, 79);  */
   border-radius: 25px;
   -webkit-box-shadow: 4px 4px 7px #404040;
   -moz-box-shadow: 4px 4px 7px #404040;
@@ -104,7 +100,9 @@
 }
 
 /* Featured Categories */
-
+#featured_categories_container {
+ padding: 0 0 150px;
+}
 #featured_categories {
   list-style-type: none;
   width: 100%;
