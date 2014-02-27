@@ -10,13 +10,19 @@ class ResourcesController < ApplicationController
   def create
     roadmap = Roadmap.find(params[:roadmap_id])
     new_resource = roadmap.resources.create(resource_params)
-    
-    client = Bitly.client
-    bitly_url = client.shorten(new_resource.url)
-    # short_url is a method for bitly gem
-    new_resource.short_url = bitly_url.short_url
-    new_resource.save
-    redirect_to roadmap_path(roadmap)
+
+    begin
+      client = Bitly.client
+      bitly_url = client.shorten(new_resource.url)
+      # short_url is a method for bitly gem
+      new_resource.short_url = bitly_url.short_url
+      new_resource.save
+    rescue
+      flash[:notice] = "Whatttta?... #{new_resource.url} is not a real site."
+      new_resource.destroy
+      redirect_to new_roadmap_resource_path(roadmap) and return if new_resource.short_url.nil?      
+    end
+      redirect_to roadmap_path(roadmap)
   end
 
   def edit
