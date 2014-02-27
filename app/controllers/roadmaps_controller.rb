@@ -17,6 +17,9 @@ class RoadmapsController < ApplicationController
   def edit
     id = params[:id]
     @roadmap = Roadmap.find(id)
+    if current_user.id != @roadmap.user.id
+      render :file => "#{RAILS_ROOT}/public/404.html",  :status => 404
+    end
   end
 
   def show
@@ -24,11 +27,12 @@ class RoadmapsController < ApplicationController
     @roadmap = Roadmap.find(id)
     @resources = @roadmap.resources.all
     @profile = @roadmap.user
+    roadmaps = Roadmap.all
+    @random_roadmaps = roadmaps.sample(6)
     respond_to do |f| 
           f.html
           f.json {render :json}
       end
-
   end
 
   def update_positions

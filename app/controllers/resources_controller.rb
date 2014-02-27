@@ -23,6 +23,9 @@ class ResourcesController < ApplicationController
 
   def edit
     @roadmap = Roadmap.find(params[:roadmap_id])
+    if current_user.id != @roadmap.user.id
+      render :file => "#{RAILS_ROOT}/public/404.html",  :status => 404
+    end
     @resource = @roadmap.resources.find(params[:id])
   end
 
@@ -37,7 +40,7 @@ class ResourcesController < ApplicationController
     resource.short_url = bitly_url.short_url
     resource.save
 
-    redirect_to roadmap_resource_path(roadmap, resource)
+    redirect_to roadmap_path(roadmap)
 
   end
 

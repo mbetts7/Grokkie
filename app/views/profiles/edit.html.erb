@@ -1,21 +1,33 @@
-<h1> Edit your profile </h1>
-  <div class="small-6 medium-6 large-6">
-    <%= simple_form_for :profile, method: :patch, url: profile_path do |f| %>
-    	  <%= f.label "Username:" %>
-        <%= f.input_field :username, as: :string, placeholder: "Username" %><br>
-    	  <%= f.label "Twitter handle (optional):" %>
-        <%= f.input :twitter_name, as: :string, placeholder: "Twitter Name" %><br>
-        <%= f.label "Github handle (optional):" %>
-    	  <%= f.input :github_name, as: :string, placeholder: "Github Name" %><br>
-        <%= f.label "Learning styles: describe learning styles here... (optional)" %>
-        <%= f.input :learning_style, collection: @learning_style, placeholder: "Learning Style" %><br>
-    	  <%= f.label "Enter quick bio here: (optional)" %>
-        <%= f.input :bio, as: :text, placeholder: "Bio" %><br>
-        <!-- paperclip -->
-          <%= f.label "Upload an image for your avatar:" %>
-          <%= f.file_field :avatar %><br>
-        <!-- paperclip -->
-        <%= f.button :submit %><br>
-        <%= f.hint "* required field" %>
-     <% end %>
+<div class="page_container">
+  <% if user_signed_in? %>
+    <%= render 'layouts/header' %>
+  <% end %>
+<div class="page_form">
+    <div class="medium-8 medium-centered large-5 large-centered columns">
+      <div class="new_roadmap_wrapper">
+        <div class="row hide-for-small header" id="home_link">
+          <div class="medium-12 medium-centered large-12 large-centered columns header">
+            <h1> Edit your profile </h1>
+          </div>
+        </div>
+        <div class="small-10 small-centered medium-8 medium-centered large-9 large-centered columns">
+          <div class="small-12 medium-12 large-12">
+            <%= simple_form_for :profile, method: :patch, url: profile_path do |f| %>
+                <%= f.input_field :username, as: :string, placeholder: "*Username" %><br>
+                <%= f.input :twitter_name, as: :string, placeholder: "Twitter Handle (optional)" %><br>
+            	  <%= f.input :github_name, as: :string, placeholder: "Github Handle (optional)" %><br>
+                <%= f.input :learning_style, collection: @learning_style, :prompt => "Choose a learning style" %><br>
+                <%= f.input :bio, as: :text, placeholder: "Create a short bio (optional)" %><br>
+                <!-- paperclip -->
+                <span>Upload avatar image:</span>
+                  <%= f.file_field :avatar %><br>
+                <!-- paperclip -->
+                <%= f.button :submit %><br>
+                <%= f.hint "* required field" %>
+             <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>

@@ -19,7 +19,7 @@ users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', pas
 
 
 # Programming/Javascript/Java-Java-Time/Resources
-category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-laptop fa-5x"></i>')
+category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-laptop fa-4x"></i>')
 
   skill << category[0].skills.create!(name: 'Javascript')
     # roadmaps for Javascript
@@ -164,7 +164,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
 
  
 # more categories and skills for display purposes
-category << Category.create!(name: 'Fitness', image_url: '<i class="fa fa-dribbble fa-5x"></i>')
+category << Category.create!(name: 'Fitness', image_url: '<i class="fa fa-dribbble fa-4x"></i>')
 
   skill << category[1].skills.create!(name: 'Cross-fit')
     roadmap << skill[5].roadmaps.create!(
@@ -196,7 +196,7 @@ category << Category.create!(name: 'Fitness', image_url: '<i class="fa fa-dribbb
 
   # skill << category[1].skills.create!(name: 'Body-Building')
 
-category << Category.create!(name: 'Cooking', image_url: '<i class="fa fa-cutlery fa-5x"></i>')
+category << Category.create!(name: 'Cooking', image_url: '<i class="fa fa-cutlery fa-4x"></i>')
 
   skill << category[2].skills.create!(name: 'Water Boiling')
     roadmap << skill[7].roadmaps.create!(
@@ -229,7 +229,7 @@ category << Category.create!(name: 'Cooking', image_url: '<i class="fa fa-cutler
   # skill << category[2].skills.create!(name: 'Salad Making')
   
 
-category << Category.create!(name: 'Languages', image_url: '<i class="fa fa-comment fa-5x"></i>')
+category << Category.create!(name: 'Languages', image_url: '<i class="fa fa-comment fa-4x"></i>')
 
   skill << category[3].skills.create!(name: 'English')
     roadmap << skill[9].roadmaps.create!(
@@ -248,7 +248,7 @@ category << Category.create!(name: 'Languages', image_url: '<i class="fa fa-comm
   # skill << category[3].skills.create!(name: 'French')
   # skill << category[3].skills.create!(name: 'German')
 
-category << Category.create!(name: 'Sciences', image_url: ' <i class="fa fa-flask fa-5x"></i>')
+category << Category.create!(name: 'Sciences', image_url: ' <i class="fa fa-flask fa-4x"></i>')
 
   skill << category[4].skills.create!(name: 'Chemistry')
      roadmap << skill[10].roadmaps.create!(
@@ -265,7 +265,7 @@ category << Category.create!(name: 'Sciences', image_url: ' <i class="fa fa-flas
       user_id: 2)
   # skill << category[4].skills.create!(name: 'Biology')
 
-category << Category.create!(name: 'Math', image_url: '<i class="fa fa-superscript fa-5x"></i>')
+category << Category.create!(name: 'Math', image_url: '<i class="fa fa-superscript fa-4x"></i>')
 
    skill << category[5].skills.create!(name: 'Algebra')
      roadmap << skill[11].roadmaps.create!(
@@ -283,7 +283,7 @@ category << Category.create!(name: 'Math', image_url: '<i class="fa fa-superscri
 #   skill << category[5].skills.create!(name: 'Calculus')
 #   skill << category[5].skills.create!(name: 'Geometry')
 
-category << Category.create!(name: 'Crafts', image_url:'<i class="fa fa-tint fa-5x"></i>')
+category << Category.create!(name: 'Crafts', image_url:'<i class="fa fa-tint fa-4x"></i>')
   skill << category[6].skills.create!(name: 'Knitting')
      roadmap << skill[12].roadmaps.create!(
         title: "Learn how to knit", 
