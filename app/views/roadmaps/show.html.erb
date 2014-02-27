@@ -2,6 +2,9 @@
   <% if user_signed_in? %>
     <%= render 'layouts/header' %>
   <% end %>
+
+<!-- Roadmap info top left-->
+
   <div class="row">
     <div class="small-12 medium-7 large-7 columns">
       <div class="roadmap_container">
@@ -17,8 +20,6 @@
         <div id="roadmap_show_description">
           <%= @roadmap.description %><br>
         </div>
-        
-
         <div class="user_edit_tools">
           <ul>
             <% if current_user == @profile %>
@@ -29,9 +30,7 @@
           </ul>
         </div> 
 
-
-
-
+<!-- Roadmap on left hand side -->
         <div class="small-12 small-centered medium-11 medium-centered large-10 large-centered columns resources">
           <% @resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
               <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
@@ -54,12 +53,7 @@
       </div>
     </div>
 
-
-
-
-
-
-
+<!-- User on right hand column -->
 
     <div class="small-12 medium-5 large-5 columns">
       <div class="row">
@@ -85,19 +79,19 @@
           </div>
         </div>
         </div>
-      </div>
-      
+      </div> 
+
       <!----- UP vote use to exist here what is this owner stuff below? -->
       <% if user_signed_in? %>
          <%if check_owner(current_user, @roadmap) %>
          <% end %>
       <% end %>
 
+<!-- Featured Roadmaps on right hand column -->
       <div class="small-12 medium-5 large-5 columns">
         <div class="row">
           <div class="user_profile_left_column" id="roadmap_user_profile">
             <h5>Featured Roadmaps</h5>
-
             <div class="row">
               <table class="featured_roadmaps">
                 <tr>
@@ -116,8 +110,7 @@
                       <%= link_to (r) do %>
                         <h5><%=r.title%></h5>
                       <% end %>
-                    </div>
-                    
+                    </div>      
                     <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
                       <%= sanitize r.skill.category.image_url %>
                     </div>
