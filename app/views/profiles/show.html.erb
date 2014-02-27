@@ -6,7 +6,7 @@
         <h5>PROFILE</h5>
           <div class="small-6 medium-6 large-6 columns" class="profile_img">
             <% if @profile.image.present? %>
-              <% @profile.image %>
+              <%= image_tag(@profile.image) %>
             <% else %>
               <%= image_tag(@profile.avatar.url(:thumb)) %>
             <% end %>
