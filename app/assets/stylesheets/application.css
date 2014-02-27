@@ -27,6 +27,30 @@
 body {
   font-family: 'Open Sans', sans-serif;
   }
+/* HEADER */
+header {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.header_wrapper {
+  margin-left: 10%;
+}
+.header ul {
+  list-style-type: none;
+}
+
+.header ul li {
+  display: inline-block;
+  padding-top: 20px;
+  margin: 0 30px;
+}
+
+.header_logo h1 {
+  font-size: 48px;
+  font-family: 'Bevan', cursive;
+  letter-spacing: 2px;
+}
 
 /**********************/
  /*SIGN IN & SIGN UP FORM */
