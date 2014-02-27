@@ -25,7 +25,7 @@
 class Resource < ActiveRecord::Base
   belongs_to :roadmap
     
-  # before_save :sanitize_website
+  before_save :sanitize_url
 
 # Adding an document to resource
   has_attached_file :attachment
@@ -56,10 +56,10 @@ class Resource < ActiveRecord::Base
 
   private
 
-  # def sanitize_website
-  #   unless self.url.include?("http://") || self.url.include?("https://")
-  #     self.url = "http://" + self.url
-  #   end
-  # end
+  def sanitize_url
+    unless self.url.include?("http://") || self.url.include?("https://")
+      self.url = "http://" + self.url
+    end
+  end
     
 end
