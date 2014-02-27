@@ -17,6 +17,9 @@ class RoadmapsController < ApplicationController
   def edit
     id = params[:id]
     @roadmap = Roadmap.find(id)
+    if current_user.id != @roadmap.user.id
+      render :file => "#{RAILS_ROOT}/public/404.html",  :status => 404
+    end
   end
 
   def show
