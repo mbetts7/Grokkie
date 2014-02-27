@@ -1,9 +1,11 @@
-<div class="profile_page_container">
-<%= link_to "Home", root_path %>
-  <div id="profile_form">
+<div class="page_container">
+  <% if user_signed_in? %>
+    <%= render 'layouts/header' %>
+  <% end %>
+  <div class="page_form">
     <div class="row">
-      <div class="small-12 medium-5 large-5 columns user_profile_left_column">
-        <h5>PROFILE</h5>
+      <div class="small-12 medium-5 large-6 columns user_profile_left_column">
+        <h5 class="green_header">PROFILE</h5>
           <div class="small-6 medium-6 large-6 columns" class="profile_img">
             <% if @profile.image.present? %>
               <%= image_tag(@profile.image) %>
@@ -11,7 +13,7 @@
               <%= image_tag(@profile.avatar.url(:thumb)) %>
             <% end %>
           </div>
-        <ul class="small-6 medium-6 large-4 columns">
+        <ul class="small-6 medium-6 large-5 columns">
           <li><i class="fa fa-user"></i><%= @profile.username %></li>
           <% if @profile.twitter_name.present? %>
           <li><i class="fa fa-twitter"></i><span><%= @profile.twitter_name %></li>
@@ -23,16 +25,14 @@
           <% else %>
           <li><i class="fa fa-github"></i><i>no entry</i></li>
           <% end %>
-        </ul>
-        <div class="small-12 medium-12 large-12 columns">
           <% if current_user == @profile %>
-            <%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %>
-            <%= link_to edit_user_registration_path do %><i class="fa fa-lock">Account Settings</i><% end %>
+          <li><%= link_to edit_profile_path(@profile) do %><i class="fa fa-cog">Edit Profile</i><% end %></li>
+          <li><%= link_to edit_user_registration_path do %><i class="fa fa-lock">Account Settings</i><% end %></li>
           <% end %>
-        </div>
+          </ul>
       </div>
       <div class="small-12 medium-5 large-6 columns end" id="user_profile_right_column">
-      <h5>BIO</h5> 
+      <h5 class="green_header">BIO</h5> 
       <% if @profile.learning_style.present? %>
         <div>Learning Style: <%= @profile.learning_style %></div><br/>
         <% else %>
@@ -48,12 +48,51 @@
 
     <div class="row"> 
       <div class="small-12 medium-11 large-12 columns" id="user_profile_body">
-        <h5>USER ROADMAPS</h5> 
-        <%= link_to "Create Roadmap", new_roadmap_path %><br>
-          <% @profile.roadmaps.each do |roadmap| %>
-           <%= link_to roadmap.title, roadmap_path(roadmap) %><br>
-        <% end %>
+        <h5 class="green_header">USER ROADMAPS</h5> 
+         <div class="row">
+          <table class="featured_roadmaps">
+            <tr>
+              <% @profile.roadmaps.each do |r| %>
+              <td class="small-10 medium-5 large-3 columns end">
+                <div class="row">
+                  <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_votes">
+                    <!-- Fix the votes!!! -->
+                    <p><i class="fa fa-thumbs-o-up"></i> <%= r.votes.count%><p> 
+                  </div>
+                </div>
+                <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+                  <%= link_to (r) do %>
+                    <h5><%=r.title%></h5>
+                  <% end %>
+                </div>
+                
+                <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+                  <%= sanitize r.skill.category.image_url %>
+                </div>
+                <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_skill">
+                  <a href=""><p><%=r.skill.name%><p></a>
+                </div>
+              </td>
+              <% end %>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

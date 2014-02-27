@@ -6,9 +6,12 @@ class ProfilesController < ApplicationController
 	end
 
 	def edit
-		id = params[:id]
+		id = params[:id] 
 		@profile = User.find(id)
-		@learning_style = ["Visual", "Auditory", "Kinesthetics"]
+		if current_user.id != @profile.id
+		  render :file => "#{RAILS_ROOT}/public/404.html",  :status => 404
+	    end
+	    @learning_style = ["Visual", "Auditory", "Kinesthetics"]
 	end
 
 	def update

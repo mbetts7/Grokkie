@@ -25,7 +25,7 @@
 }
 */
 body {
-  font-family: 'Open Sans', sans-serif;
+  background-color: #81888D;
   }
 /* HEADER */
 header {
@@ -33,20 +33,25 @@ header {
   width: 100%;
   z-index: 1;
 }
-.header_wrapper {
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.f-dropdown {
+  text-align: left;
+}
+
+.header_container {
   margin-left: 10%;
 }
-.header ul {
+
+.nav_bar li {
+  margin-top: 40px;
   list-style-type: none;
 }
 
-.header ul li {
-  display: inline-block;
-  padding-top: 20px;
-  margin: 0 30px;
-}
-
-.header_logo h1 {
+.header_container #logo h1 {
   font-size: 48px;
   font-family: 'Bevan', cursive;
   letter-spacing: 2px;
@@ -67,17 +72,21 @@ header {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  
 }
 
 .login_form {
-    padding: 20px 0px;
-    background: white;
-    box-shadow: 2px;
-    -webkit-box-shadow: 2px;
-    -moz-box-shadow: 2px;
-    color: #6D7781;
-    font-size: 16px;
-    margin-top: 10%;
+  padding: 20px 0px;
+  background: white;
+  box-shadow: 2px;
+  -webkit-box-shadow: 2px;
+  -moz-box-shadow: 2px;
+  color: #6D7781;
+  font-size: 16px;
+  margin-top: 10%;
+  -webkit-box-shadow: 4px 4px 7px #404040;
+  -moz-box-shadow: 4px 4px 7px #404040;
+  box-shadow: 4px 4px 7px #404040;
 }
 
 .login_form h3 {
@@ -91,7 +100,7 @@ header {
 }
 
 #submit_button {
-  background: #1FCE6D;
+ background-color:#70AB8F;
   width: 45%;
   height: 40px;
   border-radius: 3px;
@@ -101,97 +110,22 @@ header {
   padding-top: 3px;
 }
 
-#submit_button input[type="submit"] {
-  font-size: 18px;
+/*#submit_button input[type="submit"] {
+  font-size: 20px;
   width: 85%;
   border: none;
+  background-color: transparent;
+  cursor: pointer;
   margin-left: 20px;
-  color: #fff;
-}
+  margin-top: -20px;
+}*/
 
+input.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
 
-/* USER PROFILE SHOW PAGE */
-
-.profile_page_container {
-  background-color: #ecf0f1;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: inherit; 
-}
-
-#profile_form {
-  margin-top: 7%;
-  margin-left: 6%;
-}
-
-#profile_form ul {
-  list-style-type: none;
-}
-
-#profile_form ul li {
-  text-decoration: none;
-  font-size: 15px;
-}
-
-
-.user_profile_left_column {
-  height:200px;
-  margin-right: 2px;
-  padding: 10px;
-  background-color: #fff;
-
-}
-.user_profile_left_column h5 {
-  padding: 15px 0;
-  margin-top: -10px;
-  width: 100%;
-  background-color: #34495e;
-  border: 1px solid black;
-  text-align: center;
-  color: #fff;
-}
-
-.user_profile_left_column #profile_img {
-  height: 80px;
-  width: 110px;
-}
-
-.user_profile_left_column i {
-  padding:0 10px;
-}
-
-#user_profile_right_column {
-  height:200px;
-  margin-left: 80px;
-  padding: 10px;
-  background-color: white;
-}
-
-#user_profile_right_column h5{
-  padding: 15px 0;
-  margin-top: -10px;
-  width: 100%;
-  background-color: #34495e;
-  border: 1px solid black;
-  text-align: center;
-  color:#fff;
-}
-
-#user_profile_body {
-  margin-top:20px;
-  height: 300px;
-  background-color: #fff;
-}
-
-#user_profile_body h5 {
-  padding: 15px 0;
-  width: 100%;
-  background-color: #34495e;
-  border: 1px solid black;
-  text-align: center;
-  color: #fff;
 }
 
 
@@ -212,6 +146,21 @@ header {
   margin-left: 0;
   margin-top: 20px;
   }
+
+  .header #logo h1 {
+  font-size: 30px;
+  font-family: 'Bevan', cursive;
+  letter-spacing: 2px;
+  margin-left: -40px;
+  }
+
+  .nav_bar li {
+  margin-top: 20px;
+  list-style-type: none;
+  margin-left: 70px;
+  } 
+
+
 }
 
 @media (max-width: 628px) {
@@ -238,10 +187,6 @@ header {
 p.alert {
   color: #D00;
 }
-
-
-
-
 
 
 body {background-color: red}
