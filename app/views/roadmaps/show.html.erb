@@ -39,7 +39,11 @@
                       <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
                     </div>
                     <div class="back">
-                      <p><%= link_to resource.url %></p>
+                      <% if resource.short_url.present? %>
+                        <p><%= link_to resource.short_url %></p>
+                      <% else %> 
+                        <p><%= link_to resource.short_url %></p>
+                      <% end %>
                     </div>
                   </div>
                 <% if current_user == @profile %>
