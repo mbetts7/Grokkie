@@ -38,6 +38,7 @@
                       <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
                     </div>
                     <div class="back">
+                      <a href="#" data-reveal-id="myModal<%=resource.id%>" data-reveal>Click Me For A Modal</a> 
                       <% if resource.short_url.present? %>
                         <p><%= link_to resource.short_url %></p>
                       <% else %> 
@@ -52,7 +53,7 @@
               </div>
           <% end %>
         </div>
-
+          <%= render template: "resources/show" %>
       </div>
     </div>
 
