@@ -18,7 +18,6 @@ class ResourcesController < ApplicationController
     new_resource.short_url = bitly_url.short_url
     new_resource.save
     
-    
     redirect_to roadmap_resource_path(roadmap, new_resource)
   end
 
@@ -51,6 +50,6 @@ class ResourcesController < ApplicationController
 
   def resource_params
     params.require(:resource).permit(:name, :url, :description, :attachment, :image, :position_id, :short_url)
-  end
+  end  
   
 end
