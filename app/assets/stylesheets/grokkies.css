@@ -120,7 +120,7 @@ background-image: linear-gradient(to left bottom, #9BEEE8 1%, #81C6C1 49%);
 
 .featured_roadmaps td {
   height:300px;
-  text-align: center;
+  /*text-align: center;*/
   margin: 20px 40px;
   background-color: #fff;
   
@@ -130,15 +130,44 @@ background-image: linear-gradient(to left bottom, #9BEEE8 1%, #81C6C1 49%);
   margin-right:46px;
 }
 
+#featured_roadmap_user p {
+  font-size: 12px;  
+}
+
+#featured_roadmap_votes {
+  
+}
+
 #featured_roadmap_title {
-  height:30%;  
+  height:25%;
+  font-size: 22px;  
+}
+
+#featured_roadmap_skill p {
+  font-size: 12px;
+  margin-left:60%;
+  margin-top: 20px;
 }
 
 #featured_roadmap_images {
   margin-top: 5%;
-  height: 40%;
+  margin-left: 55px;
 }
+#featured_categories {
+   text-align: center;
 
+}
+#featured_categories  li {
+  width: 22px;
+  /*width: 80px;
+  height: 80px;
+  text-align: center;
+  border-radius: 100px;
+  -webkit-border-radius:100px;
+  -moz-webkit-radius:100px;
+  background-color: #81C6C1 ;
+  color: #fff;*/
+}
 /* MEDIA QUERIES FOR INDEX PAGE */
 
 @media (min-width: 540px) and (max-width: 1024px) {
@@ -161,9 +190,9 @@ background-image: linear-gradient(to left bottom, #9BEEE8 1%, #81C6C1 49%);
     margin: 1px;
   }
 
-  #featured_categories {
+ /* #featured_categories {
     text-align: center;
-  } 
+  } */
 
   #featured_categories li {
     margin: 0 5px;
