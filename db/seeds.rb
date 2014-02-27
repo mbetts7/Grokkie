@@ -132,7 +132,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
     # Javascript Roadmap 4    
     roadmap << skill[0].roadmaps.create!(
       title: "The easy way to learn JS", 
-      description: "[description of roadmap]",
+      description: "The path I took to learn JS",
       user_id: 4)
         resources << roadmap[3].resources.create!(
           name: "Javascript in Codecademy- Part 1", 
@@ -155,22 +155,23 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
           url: "https://www.codeschool.com/courses/javascript-road-trip-part-2",
           position_id: 4)
 
-    # roadmap << skill[0].roadmaps.create!(
-    #   title: "Roadmap 1", 
-    #   description: "[description of roadmap]",
-    #   user_id: 3)
-    # roadmap << skill[0].roadmaps.create!(
-    #   title: "Roadmap 2", 
-    #   description: "[description of roadmap]",
-    #   user_id: 4)
-    # roadmap << skill[0].roadmaps.create!(
-    #   title: "Roadmap 3", 
-    #   description: "[description of roadmap]",
-    #   user_id: 1)
-    # roadmap << skill[0].roadmaps.create!(
-    #   title: "Roadmap 4", 
-    #   description: "[description of roadmap]",
-    #   user_id: 5)
+    roadmap << skill[0].roadmaps.create!(
+      title: "Javascript", 
+      description: "[description of roadmap]",
+      user_id: 5)
+    roadmap << skill[0].roadmaps.create!(
+      title: "Javascript Funtime now", 
+      description: "[description of roadmap]",
+      user_id: 6)
+    roadmap << skill[0].roadmaps.create!(
+      title: "Javascript is difficult but doable", 
+      description: "[description of roadmap]",
+      user_id: 7)
+    roadmap << skill[0].roadmaps.create!(
+      title: "Javascript ninja", 
+      description: "[description of roadmap]",
+      user_id: 8)
+
   # Programming/Ruby
   skill << category[0].skills.create!(name: 'Ruby')
 
@@ -178,7 +179,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
     roadmap << skill[1].roadmaps.create!(
       title: "Rubilicious", 
       description: "This is how I learned Ruby really fast",
-      user_id: 5)
+      user_id: 9)
         resources << roadmap[4].resources.create!(
           name: "Ruby in Codecademy", 
           description: "This is a great intro to Ruby and its syntax", 
@@ -204,7 +205,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
     roadmap << skill[1].roadmaps.create!(
       title: "Exploring Ruby", 
       description: "These resources worked for me!",
-      user_id: 6)
+      user_id: 10)
         resources << roadmap[5].resources.create!(
           name: "Ruby Track on Codecademy", 
           description: "This track really helped me nail down syntax", 
@@ -220,11 +221,12 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
           description: "This is the ultimate list of what Ruby can do!", 
           url: "http://www.ruby-doc.org/",
           position_id: 3)
+
     # Ruby Roadmap 3  
     roadmap << skill[1].roadmaps.create!(
-      title: "Ruby and Rails", 
+      title: "Familiarize yourself with Ruby", 
       description: "Get a good foundation for Ruby and Ruby on Rails",
-      user_id: 7)
+      user_id: 1)
         resources << roadmap[6].resources.create!(
           name: "20-minute Ruby tutorial", 
           description: "Quick intro to Ruby", 
@@ -236,52 +238,128 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
           url: "http://www.codecademy.com/tracks/ruby",
           position_id: 2)
         resources << roadmap[6].resources.create!(
-          name: "Rails Tutorial by Michael Hartl", 
-          description: "Assuming you have a basic foundation in Ruby, this is the ultimate tutorial for getting started in Rails", 
-          url: "http://ruby.railstutorial.org/",
+          name: "Quick interactive tutorial for Ruby", 
+          description: "Play around with Ruby syntax", 
+          url: "http://tryruby.org/levels/1/challenges/0",
           position_id: 3)
+        resources << roadmap[6].resources.create!(
+          name: "A Beginner's Guide to Ruby", 
+          description: "Great article describing Ruby basics", 
+          url: "http://coding.smashingmagazine.com/2012/05/24/beginners-guide-ruby/",
+          position_id: 4)
 
   skill << category[0].skills.create!(name: 'Rails')
+  #Rails Roadmap 1
     roadmap << skill[2].roadmaps.create!(
       title: "Rails mastery", 
       description: "This is how I learned Ruby really fast",
-      user_id: 8)
+      user_id: 2)
+        resources << roadmap[7].resources.create!(
+          name: "Rails Tutorial by Michael Hartl", 
+          description: "Assuming you have a basic foundation in Ruby, this is the ultimate tutorial for getting started in Rails", 
+          url: "http://ruby.railstutorial.org/",
+          position_id: 1)
+        resources << roadmap[7].resources.create!(
+          name: "One Month Rails Tutorial", 
+          description: "$99 month-long self-drive tutorial", 
+          url: "https://onemonthrails.com/",
+          position_id: 2)
+        resources << roadmap[7].resources.create!(
+          name: "Ruby on Rails Guides", 
+          description: "This site serves as documentation while carrying out the creation of a simple web app", 
+          url: "http://guides.rubyonrails.org/",
+          position_id: 3)
+
+    #Rails Roadmap 2
     roadmap << skill[2].roadmaps.create!(
       title: "Exploring Rails", 
-      description: "[description of roadmap]",
-      user_id: 9)
+      description: "Solid foundation for learning Rails",
+      user_id: 2)
+        resources << roadmap[8].resources.create!(
+          name: "Jump Start Rails", 
+          description: "Spend one weekend going through this $19 tutorial to get up to speed ", 
+          url: "https://learnable.com/books/jsrails1",
+          position_id: 1)
+        resources << roadmap[8].resources.create!(
+          name: "Build a Rails app for practice", 
+          description: "A great video that walks you through building a simple Rails app", 
+          url: "https://learnable.com/courses/build-your-first-rails-app-2784",
+          position_id: 2)
+        resources << roadmap[8].resources.create!(
+          name: "Learn Ruby on Rails tutorial", 
+          description: "Great text-based Rails intro tutorial", 
+          url: "https://learnable.com/courses/build-your-first-rails-app-2784",
+          position_id: 3)
+
+    #Rails Roadmap 3
     roadmap << skill[2].roadmaps.create!(
       title: "The easy way to learn Rails", 
       description: "[description of roadmap]",
-      user_id: 10)
+      user_id: 3)
 
   skill << category[0].skills.create!(name: 'CSS')
+
+  #CSS Roadmap 1
    roadmap << skill[3].roadmaps.create!(
       title: "CSS mastery", 
       description: "This is how I learned CSS really fast",
-      user_id: 1)
+      user_id: 4)
+        resources << roadmap[9].resources.create!(
+          name: "What is CSS?", 
+          description: "Wikipedia article to explain CSS", 
+          url: "http://en.wikipedia.org/wiki/Cascading_Style_Sheets",
+          position_id: 1)
+        resources << roadmap[9].resources.create!(
+          name: "W3 School for CSS", 
+          description: "Use this link for reference for CSS syntax ", 
+          url: "http://www.w3schools.com/css/",
+          position_id: 2)
+        resources << roadmap[9].resources.create!(
+          name: "CSS Generator", 
+          description: "Experiment with CSS in real-time.  I felt this really cemented my understanding.", 
+          url: "http://css3generator.com/",
+          position_id: 3)
+
+  #CSS Roadmap 2
     roadmap << skill[3].roadmaps.create!(
       title: "Exploring CSS", 
-      description: "[description of roadmap]",
-      user_id: 2)
+      description: "You'll style like a pro after following this roadmap",
+      user_id: 5)
+        resources << roadmap[10].resources.create!(
+          name: "CSS Tricks", 
+          description: "Website that helps you make stuff look cool", 
+          url: "http://css-tricks.com/",
+          position_id: 1)
+        resources << roadmap[10].resources.create!(
+          name: "Codecademy Web Track", 
+          description: "If you're familiar with HTML, just move into the CSS modules", 
+          url: "http://www.codecademy.com/tracks/web",
+          position_id: 2)
+        resources << roadmap[10].resources.create!(
+          name: "General Assembly DASH CSS Robot", 
+          description: "Really fun exercise to practices your CSS skils", 
+          url: "https://dash.generalassemb.ly/projects/cotbots-1",
+          position_id: 3)
+
+  #CSS Roadmap 3
     roadmap << skill[3].roadmaps.create!(
       title: "The easy way to learn CSS", 
-      description: "[description of roadmap]",
-      user_id: 3)
+      description: "This roadmap will allow you to apply simple but impressive CSS to your site",
+      user_id: 6)
 
   skill << category[0].skills.create!(name: 'Python')
    roadmap << skill[4].roadmaps.create!(
       title: "Python mastery", 
       description: "This is how I learned Python really fast",
-      user_id: 4)
+      user_id: 7)
     roadmap << skill[4].roadmaps.create!(
-      title: "Exploring Python", 
-      description: "[description of roadmap]",
-      user_id: 5)
+      title: "Advanced Python", 
+      description: "Once I had a good foundation, I used this roadmap to take it to the next level",
+      user_id: 8)
     roadmap << skill[4].roadmaps.create!(
       title: "The easy way to learn Python", 
       description: "[description of roadmap]",
-      user_id: 6)
+      user_id: 9)
 
  
 # more categories and skills for display purposes
@@ -291,29 +369,29 @@ category << Category.create!(name: 'Fitness', image_url: '<i class="fa fa-dribbb
     roadmap << skill[5].roadmaps.create!(
       title: "Crossfit mastery", 
       description: "This is how I learned to lift really heavy stuff",
-      user_id: 7)
+      user_id: 10)
     roadmap << skill[5].roadmaps.create!(
       title: "Getting ripped with Crossfit", 
       description: "[description of roadmap]",
-      user_id: 8)
+      user_id: 1)
     roadmap << skill[5].roadmaps.create!(
       title: "The easy way to learn Crossfit", 
       description: "[description of roadmap]",
-      user_id: 9)
+      user_id: 2)
 
   skill << category[1].skills.create!(name: 'Bull riding')
     roadmap << skill[6].roadmaps.create!(
       title: "Rodeo master", 
       description: "This is how I learned to not fall off when riding a bull",
-      user_id: 10)
+      user_id: 3)
     roadmap << skill[6].roadmaps.create!(
       title: "Buckin' bronco", 
       description: "[description of roadmap]",
-      user_id: 1)
+      user_id: 4)
     roadmap << skill[6].roadmaps.create!(
       title: "The easy way to learn bull-riding", 
       description: "[description of roadmap]",
-      user_id: 2)
+      user_id: 5)
 
   # skill << category[1].skills.create!(name: 'Body-Building')
 
@@ -323,29 +401,29 @@ category << Category.create!(name: 'Cooking', image_url: '<i class="fa fa-cutler
     roadmap << skill[7].roadmaps.create!(
       title: "Boiling water like a true chef", 
       description: "This is how I learned to boil stuff",
-      user_id: 3)
+      user_id: 6)
     roadmap << skill[7].roadmaps.create!(
-      title: "Boiling point", 
+      title: "Boiling Water: What is the boiling point", 
       description: "[description of roadmap]",
-      user_id: 4)
+      user_id: 7)
     roadmap << skill[7].roadmaps.create!(
       title: "The easy way to learn how to boil water", 
       description: "[description of roadmap]",
-      user_id: 5)
+      user_id: 8)
 
   skill << category[2].skills.create!(name: 'Deep Frying')
     roadmap << skill[8].roadmaps.create!(
       title: "How to learn to fry to a perfect golden brown", 
       description: "This is how I learned to make fried goodness",
-      user_id: 6)
+      user_id: 9)
     roadmap << skill[8].roadmaps.create!(
       title: "Beware the smoke point: Deep-frying", 
       description: "[description of roadmap]",
-      user_id: 7)
+      user_id: 10)
     roadmap << skill[8].roadmaps.create!(
       title: "McDonald's has nothing on me and my french fries", 
       description: "[description of roadmap]",
-      user_id: 8)
+      user_id: 1)
   # skill << category[2].skills.create!(name: 'Stir Fry')
   # skill << category[2].skills.create!(name: 'Salad Making')
   
@@ -356,15 +434,15 @@ category << Category.create!(name: 'Languages', image_url: '<i class="fa fa-comm
     roadmap << skill[9].roadmaps.create!(
       title: "Me talk pretty", 
       description: "This is how I learned to speak English",
-      user_id: 9)
+      user_id: 2)
     roadmap << skill[9].roadmaps.create!(
       title: "I do grammar good", 
       description: "[description of roadmap]",
-      user_id: 10)
+      user_id: 3)
     roadmap << skill[9].roadmaps.create!(
       title: "The Queen's English", 
       description: "[description of roadmap]",
-      user_id: 1)
+      user_id: 4)
   # skill << category[3].skills.create!(name: 'Spanish')
   # skill << category[3].skills.create!(name: 'French')
   # skill << category[3].skills.create!(name: 'German')
@@ -375,15 +453,15 @@ category << Category.create!(name: 'Sciences', image_url: ' <i class="fa fa-flas
      roadmap << skill[10].roadmaps.create!(
       title: "Molecules and whatnot", 
       description: "This is how I learned about molecules",
-      user_id: 2)
+      user_id: 5)
     roadmap << skill[10].roadmaps.create!(
       title: "Covalent Bonds", 
       description: "[description of roadmap]",
-      user_id: 2)
+      user_id: 6)
     roadmap << skill[10].roadmaps.create!(
       title: "Organic Chemistry", 
       description: "Hell on earth but it works",
-      user_id: 3)
+      user_id: 7)
   # skill << category[4].skills.create!(name: 'Biology')
 
 category << Category.create!(name: 'Math', image_url: '<i class="fa fa-superscript fa-5x"></i>')
@@ -392,15 +470,15 @@ category << Category.create!(name: 'Math', image_url: '<i class="fa fa-superscri
      roadmap << skill[11].roadmaps.create!(
         title: "Learn algebra", 
         description: "This is how I learned algebra",
-        user_id: 4)
+        user_id: 8)
      roadmap << skill[11].roadmaps.create!(
         title: "x is equal to y", 
         description: "[description of roadmap]",
-        user_id: 5)
+        user_id: 9)
      roadmap << skill[11].roadmaps.create!(
         title: "Algebra master", 
         description: "I know Algebra",
-        user_id: 6)
+        user_id: 10)
 #   skill << category[5].skills.create!(name: 'Calculus')
 #   skill << category[5].skills.create!(name: 'Geometry')
 
@@ -409,13 +487,13 @@ category << Category.create!(name: 'Crafts', image_url:'<i class="fa fa-tint fa-
      roadmap << skill[12].roadmaps.create!(
         title: "Learn how to knit", 
         description: "This is how I learned to knit",
-        user_id: 7)
+        user_id: 1)
      roadmap << skill[12].roadmaps.create!(
         title: "I love yarn - you will too!", 
         description: "[description of roadmap]",
-        user_id: 8)
+        user_id: 2)
      roadmap << skill[12].roadmaps.create!(
         title: "Knit like your grandma!", 
         description: "Scarves and sweaters galore",
-        user_id: 9)
+        user_id: 3)
 
