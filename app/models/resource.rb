@@ -25,7 +25,7 @@
 class Resource < ActiveRecord::Base
   belongs_to :roadmap
     
-  before_save :save_short_link
+  # before_save :sanitize_website
 
 # Adding an document to resource
   has_attached_file :attachment
@@ -56,8 +56,10 @@ class Resource < ActiveRecord::Base
 
   private
 
-  def save_short_link
-    # fix code
-  end
+  # def sanitize_website
+  #   unless self.url.include?("http://") || self.url.include?("https://")
+  #     self.url = "http://" + self.url
+  #   end
+  # end
     
 end
