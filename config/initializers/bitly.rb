@@ -1,5 +1,6 @@
 Bitly.configure do |config|
   config.api_version = 3
-  config.login = "BITLY_USERNAME"
-  config.api_key = "BITLY_API_KEY"
+  config.login = ENV["BITLY_USERNAME"]
+  config.api_key = ENV["BITLY_API_KEY"]
+  bitly = Bitly.client
 end
