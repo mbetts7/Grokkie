@@ -37,3 +37,19 @@ $(function(){
 	});
 });
 
+function fixDiv() {
+    var $div = $("#featured_categories");
+    if ($(window).scrollTop() > $div.data("top")) { 
+        $('#featured_categories').css({'position': 'fixed', 'top': '0', 'width': '100%'}); 
+    }
+    else {
+        $('#featured_categories').css({'position': 'static', 'top': 'auto', 'width': '100%'});
+    }
+}
+
+$("#featured_categories").data("top", $("#featured_categories").offset().top);
+$(window).scroll(fixDiv);
+
+
+
+
