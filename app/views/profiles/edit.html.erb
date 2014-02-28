@@ -16,7 +16,16 @@
                 <%= f.input_field :username, as: :string, placeholder: "*Username" %><br>
                 <%= f.input :twitter_name, as: :string, placeholder: "Twitter Handle (optional)" %><br>
             	  <%= f.input :github_name, as: :string, placeholder: "Github Handle (optional)" %><br>
-                <%= f.input :learning_style, collection: @learning_style, :prompt => "Choose a learning style" %><br>
+                <a href="#" data-reveal-id="myModal" >What is a learning style?</a>
+                <div id="myModal" class="reveal-modal" data-reveal>
+                  <ul>
+                    <li><strong>Visual learners:</strong> Account for around 35% of the population.  They will prefer charts, maps, graphs, data, images and photographs.  Tailoring visual representations to visual learners will make any pitch more effective</li>
+                    <li><strong>Auditory:</strong> Auditory learners learn best by hearing information. They can usually remember information more accurately when it has been explained to them orally</li>
+                    <li><strong>Kinesthetics:</strong> These are the "hands-on learners" or the "doers" who actually concentrate better and learn more easily when movement is involved</li>
+                  </ul>
+                  <a class="close-reveal-modal">&#215;</a>
+                </div>
+                <%= f.input :learning_style, collection: @learning_style, :prompt => "Choose a learning style" %>
                 <%= f.input :bio, as: :text, placeholder: "Create a short bio (optional)" %><br>
                 <!-- paperclip -->
                 <span>Upload avatar image:</span>
