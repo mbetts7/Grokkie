@@ -10,7 +10,7 @@
   </div>
 
     <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
-      <p class='notice'><%=h flash[:notice] %></p>
+      <p class='notice'><%= flash[:notice] %></p>
       <%= simple_form_for [@roadmap, @resource] do |f| %>
         <label>Resource Name:</label>
         <%= f.input :name, as: :string %>
@@ -20,12 +20,18 @@
         <%= f.input :description, as: :text %>
         <!-- paperclip -->
         <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
-        <%= f.label "Upload an image:" %>
-        <%= f.file_field :image %>
+          <% if @resource.image.present? %>
+            <%= link_to image_tag(@resource.image.url(:thumb)), @resource.image.url(:original, false), target: "_blank" %>
+          <% end %>
+          <%= f.label "Upload an image:" %>
+          <%= f.file_field :image %>
         </div>
         <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered   columns">
-        <%= f.label "Upload a file (e.g. pdf, doc, ppt, xls, txt)" %>
-        <%= f.file_field :attachment %>
+          <% if @resource.attachment.present? %>
+            <%= link_to 'Download file: "' + @resource.attachment_file_name + '"', @resource.attachment.url(:original, false), target: "_blank" %>
+          <% end %>
+          <%= f.label "Upload a file (e.g. pdf, doc, ppt, xls, txt)" %>
+          <%= f.file_field :attachment %>
         </div>
         <!-- paperclip -->
         <%= f.button :submit %>

@@ -11,7 +11,7 @@
               <% end %><br/>
             <p><%= resource.description%></p><br/>
             <% if resource.image.present? %>
-            <%= link_to image_tag(resource.image.url(:square)), resource.image.url(:original, false), target: "_blank" %>
+            <%= link_to image_tag(resource.image.url(:thumb)), resource.image.url(:original, false), target: "_blank" %>
             <% end %>
             <% if resource.attachment.present? %>
               <%= link_to 'Download file: "' + resource.attachment_file_name + '"', resource.attachment.url(:original, false), target: "_blank" %>

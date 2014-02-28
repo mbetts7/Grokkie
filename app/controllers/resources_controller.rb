@@ -37,14 +37,14 @@ class ResourcesController < ApplicationController
     resource.update(resource_params)
     
     begin
+      current_short_url = resource.short_url
       client = Bitly.client
       bitly_url = client.shorten(resource.url)
       resource.short_url = bitly_url.short_url
       resource.save
     rescue
       flash[:notice] = "Whatttta?... #{resource.url} is not a real site."
-      resource.destroy
-      redirect_to edit_roadmap_resource_path(roadmap) and return if resource.short_url.nil?
+      redirect_to edit_roadmap_resource_path(roadmap, resource) and return if resource.short_url == current_short_url
     end
     redirect_to roadmap_path(roadmap)
   end
