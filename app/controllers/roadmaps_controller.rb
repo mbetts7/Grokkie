@@ -28,7 +28,6 @@ class RoadmapsController < ApplicationController
     id = params[:id]
     @roadmap = Roadmap.find(id)
     @resources = @roadmap.resources.all
-    @resource= @roadmap.resources.find(id)
     @profile = @roadmap.user
     roadmaps = Roadmap.all
     @random_roadmaps = roadmaps.sample(6)
