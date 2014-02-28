@@ -25,4 +25,5 @@ class Roadmap < ActiveRecord::Base
   has_many :resources, dependent: :destroy
   acts_as_votable
 
+  validates_presence_of :title
 end

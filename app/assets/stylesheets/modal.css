@@ -1,0 +1,20 @@
+.reveal-modal {
+  height: 250px;
+  width: 50%;
+  left: 65%;
+}
+
+#position_id_lg {
+  height: 248px;
+  width: 14px;
+  background-color:#D96459;
+  color: #fff;
+  padding: 90px 18px; 
+  margin-left: -15px;
+  margin-top: -30px;
+}
+
+.modal_info p {
+  margin-top: 20px;
+  margin-bottom: -10px;
+}

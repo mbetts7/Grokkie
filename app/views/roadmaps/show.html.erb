@@ -35,15 +35,41 @@
               <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
                   <div class="small-9 medium-8 large-10 columns flipper">
                     <div class="front">
-                      <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
+                      
+                        <p class="row">
+                          <span id="position_id" class="large-1 columns"><%= resource.position_id %></span>
+                          <span class="large-10 columns"><%= resource.description%>
+                            <span class="row">
+                              <span class="large-4 columns"></span><br/>
+                              <span class="large-4 columns"></span>
+                              <span class="large-9 columns social_media">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-pinterest"></i>
+                                <i class="fa fa-tumblr"></i>
+                              </span>
+                            </span>
+                          </span>
+                        </p>
+              
                     </div>
                     <div class="back">
-                      <a href="#" data-reveal-id="myModal<%=resource.id%>" data-reveal>Click Me For A Modal</a> 
-                      <% if resource.short_url.present? %>
-                        <p><%= link_to resource.short_url %></p>
-                      <% else %> 
-                        <p><%= link_to resource.url %></p>
-                      <% end %>
+                        <p class="row">
+                          <span id="position_id" class="large-1 columns"><%= resource.position_id %></span>
+                          
+                          <span class="large-10 columns"><a href="#" data-reveal-id="myModal<%=resource.id%>" data-reveal><br/>View resource</a>
+                            <span class="row">
+                              <span class="large-4 columns"></span><br/>
+                              <span class="large-4 columns"></span>
+                              <span class="large-9 columns social_media">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-pinterest"></i>
+                                <i class="fa fa-tumblr"></i>
+                              </span>
+                            </span>
+                          </span>
+                        </p>
                     </div>
                   </div>
                 <% if current_user == @profile %>
