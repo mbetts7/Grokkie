@@ -4,7 +4,6 @@ class SkillsController < ApplicationController
   	skill_id = params[:id]
   	@category = Category.find(category_id)
   	@skill = @category.skills.find(skill_id)
-    # @resource = @skill.resources
     @users = User.all
   end
 end
