@@ -43,8 +43,7 @@ class ResourcesController < ApplicationController
       resource.save
     rescue
       flash[:notice] = "Whatttta?... #{resource.url} is not a real site."
-      resource.destroy
-      redirect_to edit_roadmap_resource_path(roadmap) and return if resource.short_url.nil?
+      redirect_to edit_roadmap_resource_path(roadmap, resource) and return if resource.short_url.nil?
     end
     redirect_to roadmap_path(roadmap)
   end
