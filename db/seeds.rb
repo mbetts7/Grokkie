@@ -4,23 +4,18 @@ skill = []
 roadmap = []
 resources = []
 
-users << User.create(username: 'mike7', email: 'mike@gmail.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Finn789', email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Ashton87', email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Bob39', email: 'bob39@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Dave123', email: 'dave123@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'Cal2014', email: 'cal2014@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'bkyln112', email: 'bklyn112@rhyta.com', password: 'password', password_confirmation: 'password')
-users << User.create(username: 'george1', email: 'george1@rhyta.com', password: 'password', password_confirmation: 'password')
-# users << User.create!(email: 'mbetts7@gmail.com', password: 'password', password_confirmation: 'password')
-# users << User.create!(email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password')
-# users << User.create!(email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password')
-# users << User.create!(email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password')
-# users << User.create!(email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password')
-
-
+default_avatar = File.open('app/assets/images/default_avatar.gif')
+users << User.create(username: 'mike7', email: 'mike@gmail.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Visual')
+users << User.create(username: 'Finn789', email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Visual')
+users << User.create(username: 'Ashton87', email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Bob39', email: 'bob39@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Dave123', email: 'dave123@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Cal2014', email: 'cal2014@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Kinesthetics')
+users << User.create(username: 'bkyln112', email: 'bklyn112@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Kinesthetics')
+users << User.create(username: 'george1', email: 'george1@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Kinesthetics')
+default_avatar.close
 
 # Programming/Javascript
 category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-laptop fa-4x"></i>')
@@ -44,7 +39,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
         resources << roadmap[0].resources.create!(
           name: "Must understand variable scope", 
           description: "Variable scope is tough to wrap your mind around at first, start with this great blog post", 
-          url: "http://webcache.googleusercontent.com/search?q=cache:_lxHrsb31vYJ:javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/+&cd=1&hl=en&ct=clnk&gl=us",
+          url: "http://javascriptissexy.com/javascript-variable-scope-and-hoisting-explained/",
           position_id: 3)
         resources << roadmap[0].resources.create!(
           name: "Understanding callbacks Part I", 
@@ -54,7 +49,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
         resources << roadmap[0].resources.create!(
           name: "Understanding callbacks Part II", 
           description: "With a brief intro, now read this article on callbacks", 
-          url: "http://webcache.googleusercontent.com/search?q=cache:5iNPWfsEjXUJ:javascriptissexy.com/understand-javascript-callback-functions-and-use-them/+&cd=1&hl=en&ct=clnk&gl=us",
+          url: "http://recurial.com/programming/understanding-callback-functions-in-javascript/",
           position_id: 5)
         resources << roadmap[0].resources.create!(
           name: "What the heck is an object literal?", 
@@ -69,7 +64,7 @@ category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-la
         resources << roadmap[0].resources.create!(
           name: "Closures Part I", 
           description: "Get a good grasp of closures",
-          url: "http://webcache.googleusercontent.com/search?q=cache:T5mgE-xK3sgJ:javascriptissexy.com/understand-javascript-closures-with-ease/+&cd=1&hl=en&ct=clnk&gl=us",
+          url: "http://javascriptissexy.com/understand-javascript-closures-with-ease/",
           position_id: 8)
         resources << roadmap[0].resources.create!(
           name: "Closures Part II", 

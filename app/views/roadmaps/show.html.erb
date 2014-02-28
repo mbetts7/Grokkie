@@ -14,7 +14,7 @@
         </div>
         
         <ul class="small-12 medium-12 large-12 columns breadcrumbs">
-          <li><%= @roadmap.skill.name %></li> <li><%= @roadmap.skill.category.name %></li>
+          <li><%= @roadmap.skill.category.name %></li> <li><%= @roadmap.skill.name %></li>
         </ul>
         <div id="roadmap_show_description">
           <%= @roadmap.description %><br>
@@ -37,8 +37,9 @@
                     <div class="front">
                       
                         <p class="row">
-                          <span id="position_id" class="small-1 large-1 columns"><%= resource.position_id %></span>
-                          <span class="small-10 large-10 columns"><%= resource.description%>
+                          <span id="position_id" class="large-1 columns"><%= resource.position_id %></span>
+                          <span class="large-10 columns"><%= resource.name%>
+
                             <span class="row">
                               <span class="hide-for-small large-4 columns"></span><br/>
                               <span class="hide-for-small large-4 columns"></span>
