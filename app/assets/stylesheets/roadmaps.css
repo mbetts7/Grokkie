@@ -167,6 +167,23 @@
   font-size: 15px;
 }
 
+#sortable p {
+  border: 1px solid black;
+}
+
+#sortable {
+ 
+}
+
+ #edit_modal .reveal_modal{
+  background-color: transparent;
+}
+
+.edit_roadmap_container {
+  
+}
+
+
 /* MEDIA QUERIES */
 @media (min-width: 900px) {
   .new_roadmap_wrapper {

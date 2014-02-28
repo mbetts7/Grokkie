@@ -2,31 +2,36 @@
   <% if user_signed_in? %>
     <%= render 'layouts/header' %>
   <% end %>
+
+<!-- LEFT COLUMN -->
+
   <div class="row">
     <div class="small-12 medium-7 large-7 columns">
       <div class="roadmap_container">
-          <h1>Reorder your roadmap</h1>
-          <div id="sortable">
+          <h2 class="green_header">Reorder your roadmap</h5>
+          <div class="small-12 small-centered medium-11 medium-centered large-10 large-centered columns resources" id="sortable">
             <% @roadmap.resources.sort{|x, y| x.position_id <=> y.position_id}.each do |resource| %>
-              <div class="small-9 medium-8 large-10 columns end">
-                <div class="resource">
-                  <%= content_tag(:p, resource.name, 'data-id' => resource.id) %>
+              <div class="flip-container">
+                <div class="small-9 medium-8 large-10 columns">
+                  <div class="resource"><%= content_tag(:p, resource.name, 'data-id' => resource.id) %></div>               
                 </div>
               </div>
             <% end %>
           </div>
       </div>
     </div>
+
+<!--- RIGHT COLUMN -->
       <div class="small-12 medium-5 large-5 columns">
         <div class="row">
           <div class="user_profile_left_column" id="roadmap_user_profile">
-            <h5>Edit</h5>
+            <h5 class="green_header">Edit Roadmap Details</h5>
               <div class="small-12 medium-12 large-12 columns" class="profile_img">
                 <%= simple_form_for (@roadmap) do |f| %>
                 <%= f.input :title, as: :string, :placeholder => "title" %><br>
                 <%= f.input :description, as: :text, :placeholder => "Roadmap Description" %><br>
                 <%= f.collection_select :category_id, Category.order(:name), :id, :name, :prompt => 'Choose a cateogry' %>
-              <%= f.grouped_collection_select :skill_id, Category.order(:name), :skills, :name, :id, :name, :prompt => 'Choose a skill'%>
+                <%= f.grouped_collection_select :skill_id, Category.order(:name), :skills, :name, :id, :name, :prompt => 'Choose a skill'%>
                 <%= f.button :submit %>
                 <% end %>
               </div>
@@ -36,7 +41,7 @@
   </div>
 </div>
 
-
+  
 
 
 
