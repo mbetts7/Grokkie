@@ -1,7 +1,48 @@
-<%= link_to "Home", root_path %>
-<h1> <%= @skill.name %> </h1>
-<%= link_to "Create Roadmap", new_roadmap_path %><br>
-<% @skill.roadmaps.each do |roadmap| %>
-	<%= link_to roadmap.title, roadmap_path(roadmap.id) %><br>
-	<%= roadmap.description %> <br>
-<% end %>
+<div class="page_container">
+  <% if user_signed_in? %>
+    <%= render 'layouts/header' %>
+  <% end %>
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">    
+        <div class="small-12 small-centered large-12 large-centered columns">
+          <%= link_to "Create Roadmap", new_roadmap_path %><br>
+            <h1> <%= @skill.name %> </h1>
+            <h3><%= @category.name %></h3>
+            
+<!-- Roadmaps list -->
+        
+<div class="row">
+  <table class="featured_roadmaps">
+    <tr>
+      <% @skill.roadmaps.each do |r|%>
+      <td class="small-10 medium-5 large-3 columns end">
+        <div class="row">
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_user">
+            <a href=""><p><%= link_to r.user.username, profile_path(r.user) %><p></a> 
+          </div>
+          <div class="small-4 medium-6 large-4 columns" id="featured_roadmap_votes">
+            <!-- Fix the votes!!! -->
+            <p><i class="fa fa-thumbs-o-up"></i> <%= r.votes.count%><p> 
+          </div>
+        </div>
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_title">
+          <%= link_to (r) do %>
+            <p><%=r.title%></p>
+          <% end %>
+        </div>
+        
+        <div class="small-12 medium-12 large-12 columns" id="featured_roadmap_images">
+          <%= sanitize r.skill.category.image_url %>
+        </div>
+      </td>
+      <% end %>
+    </tr>
+  </table>
+</div>
+
+<!-- Roadmaps list -->
+
+        </div>
+    </div>
+  </div>
+</div>
