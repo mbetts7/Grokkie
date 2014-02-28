@@ -129,7 +129,9 @@
 .resource i {
   padding: 40px 0;
 }
-
+.social_media {
+  margin: -4% 0;
+}
 .social_media i {
   color: gray;
   margin: 0 7%;
