@@ -5,7 +5,7 @@
         <span id="position_id_lg" class="large-2 columns"><%= resource.position_id %></span>
           <span class="large-10 columns modal_info"><h3><%= resource.name %></h3>
             <% if resource.short_url.present? %>
-                <a><%= link_to resource.short_url %></a>
+                <a><%= link_to resource.short_url, resource.short_url, :target => "_blank" %></a>
                   <% else %> 
                 <a><%=  link_to resource.url %></a>
               <% end %><br/>
