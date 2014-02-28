@@ -19,9 +19,9 @@
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
             </div>
-            <div class="small-8 medium-8 large-8 columns" id="submit_button">
-              <%= f.button "Sign up" %>
-            </div>  
+            <div class="small-12 medium-10 large-8 columns sign_in white button-small">
+              <%= f.button :submit, "Sign up" %><span><i class="fa fa-power-off"></i></span>
+            </div>
           </div>
       <% end %>
       <%= render "devise/shared/links" %>
