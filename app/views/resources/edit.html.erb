@@ -21,7 +21,7 @@
         <!-- paperclip -->
         <div class="small-12 small-centered medium-12 medium-centered large-12 large-centered columns">
           <% if @resource.image.present? %>
-            <%= link_to image_tag(@resource.image.url(:square)), @resource.image.url(:original, false), target: "_blank" %>
+            <%= link_to image_tag(@resource.image.url(:thumb)), @resource.image.url(:original, false), target: "_blank" %>
           <% end %>
           <%= f.label "Upload an image:" %>
           <%= f.file_field :image %>
