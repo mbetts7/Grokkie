@@ -4,17 +4,18 @@ skill = []
 roadmap = []
 resources = []
 
-users << User.create(username: 'mike7', email: 'mike@gmail.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Visual')
-users << User.create(username: 'Finn789', email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Visual')
-users << User.create(username: 'Ashton87', email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Auditory')
-users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Auditory')
-users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Auditory')
-users << User.create(username: 'Bob39', email: 'bob39@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Auditory')
-users << User.create(username: 'Dave123', email: 'dave123@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Auditory')
-users << User.create(username: 'Cal2014', email: 'cal2014@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Kinesthetics')
-users << User.create(username: 'bkyln112', email: 'bklyn112@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Kinesthetics')
-users << User.create(username: 'george1', email: 'george1@rhyta.com', password: 'password', password_confirmation: 'password', avatar: 'default_avatar.gif', learning_style: 'Kinesthetics')
-
+default_avatar = File.open('app/assets/images/default_avatar.gif')
+users << User.create(username: 'mike7', email: 'mike@gmail.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Visual')
+users << User.create(username: 'Finn789', email: 'FinnMurray@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Visual')
+users << User.create(username: 'Ashton87', email: 'AshtonRide@jourrapide.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Zac0987', email: 'ZacChave@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Ruby098', email: 'RubySpain@jourrapide.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Bob39', email: 'bob39@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Dave123', email: 'dave123@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Auditory')
+users << User.create(username: 'Cal2014', email: 'cal2014@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Kinesthetics')
+users << User.create(username: 'bkyln112', email: 'bklyn112@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Kinesthetics')
+users << User.create(username: 'george1', email: 'george1@rhyta.com', password: 'password', password_confirmation: 'password', avatar: default_avatar, learning_style: 'Kinesthetics')
+default_avatar.close
 
 # Programming/Javascript
 category << Category.create!(name: 'Programming', image_url: '<i class="fa fa-laptop fa-4x"></i>')
