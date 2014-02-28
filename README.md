@@ -18,7 +18,7 @@ Chemistry, and Algebra.
 
 ##Technologies##
 
-Grokkie uses the following technologies:
+Grokkie was built with Ruby on Rails, and uses the following technologies:
 - User Authentication and Profiles: [Devise](http://rubygems.org/gems/devise) and [OmniAuth for    LinkedIn](http://rubygems.org/gems/omniauth-linkedin) RubyGems
 - Shortened and validated URLs: [bit.ly API](http://dev.bitly.com/)
 - Image and file upload: [Paperclip](https://rubygems.org/gems/paperclip) RubyGem
