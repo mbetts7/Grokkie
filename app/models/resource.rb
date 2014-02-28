@@ -30,7 +30,6 @@ class Resource < ActiveRecord::Base
 # Adding an document to resource
   has_attached_file :attachment
 
-
   #MIME types http://msdn.microsoft.com/en-us/library/ms775147(v=vs.85).aspx
   validates_attachment_content_type :attachment, content_type: [
     'application/pdf', 
