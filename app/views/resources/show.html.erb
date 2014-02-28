@@ -1,15 +1,35 @@
-<% @resources.each do |resource| %>
-<div id="myModal<%= resource.id%>" class="reveal-modal" data-reveal>
-  <%= resource.name %>
-  <%= resource.url %>
-  <%= resource.description %>
-  <!-- paperclip -->
-  <% if resource.image.present? %>
-    <%= link_to image_tag(resource.image.url(:square)), resource.image.url(:original, false), target: "_blank" %>
+<div class="modal_wrapper">
+  <% @resources.each do |resource| %>
+    <div id="myModal<%= resource.id%>" class="reveal-modal" data-reveal>
+      <div class="row">
+        <span id="position_id_lg" class="large-2 columns"><%= resource.position_id %></span>
+          <span class="large-10 columns modal_info"><h3><%= resource.name %></h3>
+            <% if resource.short_url.present? %>
+                <a><%= link_to resource.short_url %></a>
+                  <% else %> 
+                <a><%=  link_to resource.url %></a>
+              <% end %><br/>
+            <p><%= resource.description%></p><br/>
+            <% if resource.image.present? %>
+            <%= link_to image_tag(resource.image.url(:square)), resource.image.url(:original, false), target: "_blank" %>
+            <% end %>
+            <% if resource.attachment.present? %>
+              <%= link_to 'Download file: "' + resource.attachment_file_name + '"', resource.attachment.url(:original, false), target: "_blank" %>
+            <% end %>
+            <span class="row">
+              <span class="large-4 columns"></span><br/>
+              <span class="large-4 columns"></span>
+              <span class="large-9 columns social_media">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-pinterest"></i>
+                <i class="fa fa-tumblr"></i>
+              </span>
+            </span>
+          </span>
+        </div>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
   <% end %>
-  <% if resource.attachment.present? %>
-    <%= link_to 'Download file: "' + resource.attachment_file_name + '"', resource.attachment.url(:original, false), target: "_blank" %>
-  <% end %>
-  <a class="close-reveal-modal">&#215;</a>
 </div>
-<% end %>
+     
